@@ -1,73 +1,187 @@
-# Welcome to your Lovable project
+# AI Demo & Learn Community Website
 
-## Project info
+A modern, community-driven website for the AI Demo & Learn community. Built with React, TypeScript, and TailwindCSS for a beautiful, responsive experience.
 
-**URL**: https://lovable.dev/projects/eb7a3652-78b6-43e8-a0fe-0cbac814cb9f
+## 🚀 Quick Start
 
-## How can I edit this code?
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-There are several ways of editing your application.
+### Installation & Development
 
-**Use Lovable**
+```bash
+# Clone the repository
+git clone https://github.com/elliotkoss/ai-demo-and-learn.git
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/eb7a3652-78b6-43e8-a0fe-0cbac814cb9f) and start prompting.
+# Navigate to the project directory
+cd ai-demo-and-learn
 
-Changes made via Lovable will be committed automatically to this repo.
+# Install dependencies
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Building for Production
 
-**Use GitHub Codespaces**
+```bash
+# Build the project
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview the production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## 🚀 Deployment
 
-This project is built with:
+This is a fully static site that can be deployed to any static hosting service:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Vercel
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite build settings
+3. Deploy with default settings
 
-## How can I deploy this project?
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy
 
-Simply open [Lovable](https://lovable.dev/projects/eb7a3652-78b6-43e8-a0fe-0cbac814cb9f) and click on Share -> Publish.
+### GitHub Pages
+1. Enable GitHub Pages in your repository settings
+2. Use GitHub Actions for automatic deployment
+3. The site will be available at `https://yourusername.github.io/ai-demo-and-learn`
 
-## Can I connect a custom domain to my Lovable project?
+## 📁 Project Structure
 
-Yes, you can!
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # Base UI components (buttons, cards, etc.)
+│   ├── Header.tsx      # Site navigation
+│   ├── Footer.tsx      # Site footer
+│   └── ...
+├── data/               # Static data files
+│   ├── projects.ts     # Community projects
+│   └── resources.ts    # AI tools and resources
+├── pages/              # Page components
+│   ├── Home.tsx        # Homepage
+│   ├── Projects.tsx    # Projects showcase
+│   ├── Resources.tsx   # AI resources
+│   ├── Join.tsx        # Community info
+│   └── Consulting.tsx  # Consulting services
+├── config.ts           # Site configuration
+└── ...
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 How to Contribute
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+We welcome contributions from community members! Here's how you can help:
+
+### Adding Your Project
+
+1. **Fork the repository** on GitHub
+2. **Edit** `src/data/projects.ts`
+3. **Add your project** following this format:
+
+```typescript
+{
+  title: "Your Project Name",
+  creator: "Your Name",
+  description: "A brief description of what your project does and its key features.",
+  imageUrl: "/images/your-project-image.jpg", // Optional
+  links: [
+    { href: "https://github.com/yourusername/project", label: "GitHub" },
+    { href: "https://your-demo.com", label: "Live Demo" }
+  ],
+  tags: ["gen-ai", "web", "your-tags"]
+}
+```
+
+4. **Add an image** (optional): Place your project image in `public/images/`
+5. **Submit a pull request** with your changes
+
+### Adding AI Resources
+
+1. **Edit** `src/data/resources.ts`
+2. **Add your resource** following this format:
+
+```typescript
+{
+  name: "Tool Name",
+  url: "https://tool-website.com",
+  description: "What this tool does and why it's useful for AI builders.",
+  deals: [ // Optional
+    {
+      description: "Special discount or offer",
+      url: "https://special-offer-link.com"
+    }
+  ],
+  tags: ["category", "type"]
+}
+```
+
+3. **Submit a pull request** with your changes
+
+### Improving the Website
+
+- **Bug fixes**: Found a bug? Submit an issue or fix it and send a PR
+- **Feature requests**: Have an idea? Open an issue to discuss it
+- **Design improvements**: Help make the site even more beautiful
+- **Documentation**: Help improve this README or add inline documentation
+
+### Pull Request Guidelines
+
+1. **Keep changes focused**: One feature/fix per PR
+2. **Write clear commit messages**: Describe what you changed and why
+3. **Test your changes**: Make sure the site builds and works correctly
+4. **Follow the existing code style**: Use the same patterns as existing code
+
+## 🎨 Design System
+
+The site uses a carefully crafted design system with:
+
+- **Colors**: Purple-to-blue gradients with bright accents
+- **Typography**: Modern sans-serif fonts with clear hierarchy
+- **Components**: Consistent, reusable UI components
+- **Dark Mode**: Automatic system preference detection
+- **Responsive**: Mobile-first design that works on all devices
+
+All styles are defined in `src/index.css` and `tailwind.config.ts` for consistency.
+
+## 📝 Content Guidelines
+
+When adding projects or resources:
+
+- **Be descriptive**: Help others understand what makes your contribution valuable
+- **Include links**: GitHub repos, live demos, documentation
+- **Use appropriate tags**: Help with filtering and discovery
+- **High-quality images**: Use clear, well-lit screenshots or graphics
+- **Keep it current**: Remove or update outdated information
+
+## 🔧 Technical Details
+
+- **Framework**: React 18 with TypeScript
+- **Styling**: TailwindCSS with custom design system
+- **Routing**: React Router for client-side routing
+- **Build Tool**: Vite for fast development and optimized builds
+- **Icons**: Lucide React for consistent iconography
+- **Accessibility**: WCAG compliant with semantic HTML
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙋‍♀️ Questions?
+
+- **Join our Discord**: [https://discord.gg/uUvVnnkPur](https://discord.gg/uUvVnnkPur)
+- **GitHub Issues**: For bug reports and feature requests
+- **Email**: Contact elliot@teqcrew.com for other inquiries
+
+---
+
+Built with ❤️ by the AI Demo & Learn community
