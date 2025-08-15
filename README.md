@@ -27,7 +27,9 @@ docker build -t react-app .
 
 ### 🔁 2. Run the Docker Container (with Hot Reloading)
 
+*********
 🚨 If you run into an issue where Docker tells you something is already running at that port, look at step #5.
+*********
 
 **macOS/Linux:**
 ```bash
