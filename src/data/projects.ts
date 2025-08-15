@@ -9,15 +9,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "AI Story Generator",
-    creator: "Jane Doe",
-    description: "Generates creative short stories from simple prompts using OpenAI's GPT models. Features customizable genres, character archetypes, and story length options.",
-    imageUrl: "/images/ai-story-generator.jpg",
+    title: "Fantasy Book Club",
+    creator: "Heneu Tan",
+    description: "Bring books to life. Interactive discussions to strengthen your child's comprehension and confidence in speaking using AI.",
+    imageUrl: "/images/fantasy-bookclub-ai.png",
     links: [
-      { href: "https://github.com/janedoe/ai-story-generator", label: "GitHub" },
-      { href: "https://ai-story-demo.vercel.app", label: "Live Demo" }
+      //{ href: "https://github.com/janedoe/ai-story-generator", label: "GitHub" },
+      { href: "https://fantasybookclub.ai", label: "Website" }
     ],
-    tags: ["gen-ai", "web"]
+    tags: ["n8n", "cursor", "audio-ai", "animation"]
   },
   {
     title: "Image Remix with ComfyUI",

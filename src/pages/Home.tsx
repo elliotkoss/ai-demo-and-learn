@@ -42,13 +42,7 @@ const Home = () => {
                   <MessageSquare className="h-5 w-5 mr-2" />
                   Join Discord
                 </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="border-white/30 text-white hover:bg-white/10">
-                <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5 mr-2" />
-                  Contribute on GitHub
-                </a>
-              </Button>
+              </Button>              
             </div>
           </div>
         </div>
@@ -98,7 +92,7 @@ const Home = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground">
-                  Collaborate on real-world use cases and offer consulting services powered by our collective expertise.
+                  Collaborate on real-world use cases and ask questions to the community to grow your knowledge.
                 </p>
               </CardContent>
             </Card>
@@ -180,12 +174,6 @@ const Home = () => {
               <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="h-5 w-5 mr-2" />
                 Join Discord
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
-              <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 mr-2" />
-                Contribute on GitHub
               </a>
             </Button>
           </div>
