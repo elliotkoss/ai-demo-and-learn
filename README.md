@@ -2,7 +2,74 @@
 
 A modern, community-driven website for the AI Demo & Learn community. Built with React, TypeScript, and TailwindCSS for a beautiful, responsive experience.
 
-## 🚀 Quick Start
+## 🚀 Quick Start with Docker
+
+To make setup fast and painless, this project includes a pre-configured `Dockerfile` so you can spin up a local development environment with hot reload support.
+
+---
+
+### 🐳 Prerequisites
+
+Make sure you have Docker installed and running on your machine.  
+If not, ask ChatGPT, Claude, Perplexity, or your favorite IDE how to install it.
+
+Also, navigate to the project directory.
+
+---
+
+### ⚙️ 1. Build the Docker Image
+
+```bash
+docker build -t react-app .
+```
+
+---
+
+### 🔁 2. Run the Docker Container (with Hot Reloading)
+
+**macOS/Linux:**
+```bash
+docker run --rm -p 8080:8080 -v $(pwd):/app react-app
+```
+
+**Windows (cmd):**
+```bash
+docker run --rm -p 8080:8080 -v %cd%:/app react-app
+```
+
+**Windows (PowerShell):**
+```bash
+docker run --rm -p 8080:8080 -v ${PWD}:/app react-app
+```
+
+This command:
+- Enables page reloading when you change files
+- Automatically installs dependencies
+- Mounts your local project for live editing
+- Cleans up the container when you exit
+
+> 💡 It may take a moment to start on the first run — it's doing some work to make your life easier.
+
+---
+
+### 🌐 3. Open the Site
+
+Visit: [http://localhost:8080](http://localhost:8080)
+
+---
+
+### 🛑 4. Stop the Server
+
+To shut down the app and remove the container, press:
+
+```
+Ctrl + C
+```
+
+
+## Quick Start without Docker
+
+If you use Docker, you can ignore all of this!
 
 ### Prerequisites
 - Node.js (v18 or higher)
