@@ -27,19 +27,21 @@ docker build -t react-app .
 
 ### 🔁 2. Run the Docker Container (with Hot Reloading)
 
+🚨 If you run into an issue where Docker tells you something is already running at that port, look at step #5.
+
 **macOS/Linux:**
 ```bash
-docker run --rm -p 8080:8080 -v $(pwd):/app react-app
+docker run --rm -p 8080:8080 -v $(pwd):/app -e CHOKIDAR_USEPOLLING=true react-app
 ```
 
 **Windows (cmd):**
 ```bash
-docker run --rm -p 8080:8080 -v %cd%:/app react-app
+docker run --rm -p 8080:8080 -v %cd%:/app -e CHOKIDAR_USEPOLLING=true react-app
 ```
 
 **Windows (PowerShell):**
 ```bash
-docker run --rm -p 8080:8080 -v ${PWD}:/app react-app
+docker run --rm -p 8080:8080 -v ${PWD}:/app -e CHOKIDAR_USEPOLLING=true react-app
 ```
 
 This command:
@@ -62,10 +64,21 @@ Visit: [http://localhost:8080](http://localhost:8080)
 
 To shut down the app and remove the container, press:
 
-```
+```bash
 Ctrl + C
 ```
 
+### 5. Stop Container
+
+If your docker container is still running and won't let you run the #2 command, you'll need to find the docker container ID and stop it.
+
+```bash
+docker ps
+```
+
+```bash
+docker stop (containerID)
+```
 
 ## Quick Start without Docker
 
