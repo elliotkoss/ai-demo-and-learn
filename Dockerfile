@@ -1,17 +1,22 @@
-# Use official Node.js LTS image as base
-FROM node:18
+# Development stage
+FROM node:18 as development
 
-# Set working directory inside the container
 WORKDIR /app
-
-# Copy package.json and package-lock.json first
 COPY package*.json ./
+RUN npm install
 
-# Build the React app (optional — for production)
-# RUN npm run build
-
-# Expose the port React runs on
 EXPOSE 8080
+CMD ["npm", "run", "dev"]
 
-# Run Vite with proper signal forwarding
-CMD ["sh", "-c", "npm install && npm run dev"]
+# Production stage
+FROM node:18 as production
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
+EXPOSE 8080
+CMD ["npm", "run", "preview"]

@@ -64,7 +64,7 @@ const Home = () => {
             <Card className="bg-gradient-card shadow-card">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 mx-auto text-primary mb-4" />
-                <h3 className="text-xl font-semibold text-card-foreground">Weekly Meetups</h3>
+                <h3 className="text-xl font-semibold text-card-foreground">Monthly Meetups</h3>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground">

@@ -23,7 +23,7 @@ const Join = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Meeting Details */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Weekly Meetups</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Monthly Meetups</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="bg-gradient-card shadow-card">
@@ -41,7 +41,7 @@ const Join = () => {
                   {SITE.meeting.when}
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Recurring weekly sessions
+                  Recurring monthly sessions
                 </p>
               </CardContent>
             </Card>
@@ -179,7 +179,7 @@ const Join = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Share your work with the community during our weekly meetups. Whether it's a quick demo or 
+                  Share your work with the community during our monthly meetups. Whether it's a quick demo or 
                   a deep technical discussion, all contributions are welcome.
                 </p>
                 <Button variant="outline" asChild>

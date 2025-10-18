@@ -1,7 +1,7 @@
 export const SITE = {
   title: "AI Demo & Learn",
-  tagline: "Weekly deep dives, demos, and AI exploration with builders, creators, and dreamers.",
-  description: "A friendly community for EVERYONE who learns by demoing AI weekly.",
+  tagline: "Monthly deep dives, demos, and AI exploration with builders, creators, and dreamers.",
+  description: "A friendly community for EVERYONE who learns by demoing AI monthly.",
   discordUrl: "https://discord.gg/uUvVnnkPur",
   githubRepo: "https://github.com/elliotkoss/ai-demo-and-learn",
   meeting: {

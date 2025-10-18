@@ -20,14 +20,14 @@ export const projects: Project[] = [
     tags: ["n8n", "cursor", "audio-ai", "animation"]
   },
   {
-    title: "Image Remix with ComfyUI",
-    creator: "John Smith",
-    description: "Advanced image-to-image transformations using ComfyUI workflows. Supports style transfer, inpainting, and complex multi-step image generation pipelines.",
-    imageUrl: "/images/comfyui-remix.jpg",
+    title: "RecapVid",
+    creator: "Elliot Koss",
+    description: "A fun tool to generate AI videos to roast your fantasy league. Create hilarious recap videos of your fantasy football season using AI-powered video generation.",
+    imageUrl: "/images/recapvid.jpg", // Temporary - using smaller image to test
     links: [
-      { href: "https://github.com/johnsmith/comfyui-remix", label: "GitHub" }
+      { href: "https://recapvid.com", label: "Website" }
     ],
-    tags: ["comfyui", "image"]
+    tags: ["cursor", "react", "node", "openai"]
   },
   {
     title: "Personalized Code Reviewer",
