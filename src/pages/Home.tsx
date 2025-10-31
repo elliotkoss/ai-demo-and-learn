@@ -10,7 +10,7 @@ import { projects } from "@/data/projects";
 import { resources } from "@/data/resources";
 
 const Home = () => {
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjects = projects.slice(0, 2);
   const featuredResources = resources.slice(0, 4);
 
   return (
@@ -112,12 +112,7 @@ const Home = () => {
                 Discover what our community has been building
               </p>
             </div>
-            <Button variant="outline" asChild>
-              <Link to="/projects">
-                View All Projects
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Link>
-            </Button>
+            {/* View All Projects button temporarily hidden until we have more projects */}
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

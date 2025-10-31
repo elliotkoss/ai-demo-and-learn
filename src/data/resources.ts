@@ -48,5 +48,35 @@ export const resources: Resource[] = [
     url: "https://github.com/comfyanonymous/ComfyUI",
     description: "Modular and powerful UI for creating Stable Diffusion workflows. Node-based interface for complex image and video generation pipelines.",
     tags: ["gen-ai", "open-source", "image", "video"]
+  },
+  {
+    name: "n8n",
+    url: "https://n8n.io/",
+    description: "Open-source workflow automation platform with deep AI tooling. Build multi-step agents, integrate 500+ apps, and self-host end‑to‑end including AI models.",
+    tags: ["automation", "agents", "open-source", "workflows"]
+  },
+  {
+    name: "ElevenLabs",
+    url: "https://elevenlabs.io/",
+    description: "State-of-the-art AI audio platform: expressive Text‑to‑Speech, Dubbing, Voice Cloning, Speech‑to‑Text, and low‑latency voice agents for production apps.",
+    tags: ["audio", "tts", "dubbing", "voice-cloning"]
+  },
+  {
+    name: "HeyGen",
+    url: "https://app.heygen.com/",
+    description: "Generative video platform for realistic avatars, lip‑sync, and multilingual video creation—great for demos, training, and marketing content.",
+    tags: ["video", "avatars", "multilingual"]
+  },
+  {
+    name: "Sora",
+    url: "https://sora.chatgpt.com/",
+    description: "Cutting‑edge text‑to‑video model capable of generating high‑fidelity, coherent videos from prompts; useful for concept visualization and prototyping.",
+    tags: ["video", "gen-ai", "models"]
+  },
+  {
+    name: "LM Studio",
+    url: "https://lmstudio.ai/",
+    description: "Local LLM desktop app to run, fine‑tune, and serve open models on your machine with a simple UI and compatible server APIs.",
+    tags: ["local-llm", "devtools", "models"]
   }
 ];

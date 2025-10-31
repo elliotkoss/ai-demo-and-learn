@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      target: development
     ports:
       - "8080:8080"
     volumes:
@@ -10,6 +12,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
     stdin_open: true
     tty: true
 

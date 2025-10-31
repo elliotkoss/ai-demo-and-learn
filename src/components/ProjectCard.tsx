@@ -9,21 +9,38 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const websiteLink = project.links?.find(l => l.label.toLowerCase().includes("website"))?.href;
   return (
     <Card className="group h-full bg-gradient-card shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
       <CardHeader className="pb-3">
         {project.imageUrl && (
           <div className="aspect-video rounded-lg bg-muted overflow-hidden mb-3">
-            <img 
-              src={project.imageUrl} 
-              alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
+            {websiteLink ? (
+              <a href={websiteLink} target="_blank" rel="noopener noreferrer">
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </a>
+            ) : (
+              <img 
+                src={project.imageUrl} 
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            )}
           </div>
         )}
         <div className="space-y-2">
           <h3 className="font-semibold text-lg leading-tight text-card-foreground">
-            {project.title}
+            {websiteLink ? (
+              <a href={websiteLink} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {project.title}
+              </a>
+            ) : (
+              project.title
+            )}
           </h3>
           {project.creator && (
             <div className="flex items-center text-sm text-muted-foreground">

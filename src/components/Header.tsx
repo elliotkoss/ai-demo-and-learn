@@ -12,7 +12,7 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
     { href: "/resources", label: "Resources" },
-    { href: "/join", label: "Join" },
+    { href: "/team", label: "Team" },
     { href: "/consulting", label: "Consulting" }
   ];
 
@@ -27,9 +27,13 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">AI</span>
-            </div>
+            <img
+              src="/images/AIDemoLearnMascot-Square.png"
+              alt="AI Demo & Learn"
+              className="h-8 w-8 rounded-lg object-cover"
+              loading="eager"
+              decoding="sync"
+            />
             <span className="hidden sm:inline-block font-bold text-foreground">
               {SITE.title}
             </span>

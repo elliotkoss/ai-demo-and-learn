@@ -30,13 +30,14 @@ export const projects: Project[] = [
     tags: ["cursor", "react", "node", "openai"]
   },
   {
-    title: "Personalized Code Reviewer",
-    creator: "Alex Ray",
-    description: "Claude-powered code linter that learns your team's style guide and provides personalized feedback. Integrates with GitHub Actions for automated code reviews.",
-    imageUrl: "/images/code-reviewer.jpg",
+    title: "Career Amplifier",
+    creator: "Elliot Koss",
+    description: "Daily job discovery from company job boards only, tailored to you. Browse or sign up to receive fresh roles directly from company sites.",
+    imageUrl: "/images/careeramplifier.png",
     links: [
-      { href: "https://github.com/alexray/code-reviewer-ai", label: "GitHub" }
+      { href: "https://careeramplifier.com", label: "Website" }
     ],
-    tags: ["devtools", "agents"]
-  }
+    tags: ["cursor", "openai", "react", "node", "python"]
+  },
+  
 ];
