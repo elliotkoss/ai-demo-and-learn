@@ -45,7 +45,7 @@ export const resources: Resource[] = [
   },
   {
     name: "ComfyUI",
-    url: "https://github.com/comfyanonymous/ComfyUI",
+    url: "https://comfy.org",
     description: "Modular and powerful UI for creating Stable Diffusion workflows. Node-based interface for complex image and video generation pipelines.",
     tags: ["gen-ai", "open-source", "image", "video"]
   },

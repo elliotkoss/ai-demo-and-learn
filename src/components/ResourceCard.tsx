@@ -14,7 +14,14 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <h3 className="font-semibold text-lg leading-tight text-card-foreground">
-            {resource.name}
+            <a
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline underline-offset-2"
+            >
+              {resource.name}
+            </a>
           </h3>
           {resource.deals && resource.deals.length > 0 && (
             <Gift className="h-4 w-4 text-warning shrink-0 ml-2" />
