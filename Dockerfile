@@ -1,5 +1,5 @@
 # Development stage
-FROM node:18 as development
+FROM node:18 AS development
 
 WORKDIR /app
 COPY package*.json ./
@@ -9,7 +9,7 @@ EXPOSE 8080
 CMD ["npm", "run", "dev"]
 
 # Production stage
-FROM node:18 as production
+FROM node:18 AS production
 
 WORKDIR /app
 COPY package*.json ./

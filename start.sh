@@ -50,11 +50,38 @@ start_dev() {
         exit 1
     fi
     
-    # Start the development environment
-    print_status "Starting containers with hot reload..."
-    docker compose up --build
+    # Ensure host node_modules directory exists for bind mount so editor can resolve deps
+    if [ ! -d "node_modules" ]; then
+        print_status "Creating host node_modules directory (bind-mounted to container)..."
+        mkdir -p node_modules
+    fi
     
+    # Ensure host node_modules directory exists for bind mount so editor can resolve deps
+    if [ ! -d "node_modules" ]; then
+        print_status "Creating host node_modules directory (bind-mounted to container)..."
+        mkdir -p node_modules
+    fi
+
+    # Determine if host node_modules is empty (first run)
+    INSTALL_NEEDED=false
+    if [ -z "$(ls -A node_modules 2>/dev/null)" ]; then
+        INSTALL_NEEDED=true
+        print_status "Detected empty ./node_modules. Will install dependencies inside the container."
+    fi
+
+    # If needed, install deps using a one-off container (works even if the app service can't stay up yet)
+    if [ "$INSTALL_NEEDED" = true ]; then
+        print_status "Installing dependencies using one-off container... (this may take a minute)"
+        docker compose run --rm app npm install
+    fi
+
+    # Start the development environment in the background now that deps are present
+    print_status "Starting containers with hot reload (detached)..."
+    docker compose up -d --build
+
     print_success "Development environment started! Visit http://localhost:8080"
+    print_status "Following logs (Ctrl+C to exit)..."
+    docker compose logs -f
 }
 
 # Function to clean up containers and images
