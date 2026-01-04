@@ -1,9 +1,8 @@
-import { Brain, Users, Zap, Mail, MessageSquare, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Brain, Users, Zap, CheckCircle } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
 import PageHeader from "@/components/PageHeader";
-import { SITE } from "@/config";
+import ConsultingForm from "@/components/ConsultingForm";
 
 const Consulting = () => {
   return (
@@ -12,12 +11,13 @@ const Consulting = () => {
         title="AI Demo & Learn Consulting"
         description="Powered by our community's collective expertise. From strategy to implementation, we help you harness the power of AI for your business."
       >
-        <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90 shadow-glow">
-          <a href={`mailto:${SITE.consultingEmail}`}>
-            <Mail className="h-5 w-5 mr-2" />
-            Contact {SITE.contactName}
-          </a>
-        </Button>
+        <div className="max-w-2xl mx-auto mt-8">
+          <Card className="shadow-lg border-2 border-primary/10">
+            <CardContent className="p-8 text-left">
+              <ConsultingForm />
+            </CardContent>
+          </Card>
+        </div>
       </PageHeader>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -224,36 +224,7 @@ const Consulting = () => {
           </div>
         </div>
 
-        {/* Contact CTA */}
-        <div className="text-center">
-          <div className="bg-gradient-primary rounded-lg p-8 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90" />
-            <div className="relative">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Start Your AI Journey?
-              </h2>
-              <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-                Let's discuss how we can help you leverage AI to transform your business. 
-                Reach out to {SITE.contactName} for a consultation.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
-                  <a href={`mailto:${SITE.consultingEmail}?subject=AI Consulting Inquiry`}>
-                    <Mail className="h-5 w-5 mr-2" />
-                    Email {SITE.contactName}
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
-                  <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare className="h-5 w-5 mr-2" />
-                    Join Discord First
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </MainLayout>
   );

@@ -9,34 +9,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "AI Story Generator",
-    creator: "Jane Doe",
-    description: "Generates creative short stories from simple prompts using OpenAI's GPT models. Features customizable genres, character archetypes, and story length options.",
-    imageUrl: "/images/ai-story-generator.jpg",
+    title: "Fantasy Book Club",
+    creator: "Heneu Tan",
+    description: "Bring books to life. Interactive discussions to strengthen your child's comprehension and confidence in speaking using AI.",
+    imageUrl: "/images/fantasy-bookclub-ai.png",
     links: [
-      { href: "https://github.com/janedoe/ai-story-generator", label: "GitHub" },
-      { href: "https://ai-story-demo.vercel.app", label: "Live Demo" }
+      //{ href: "https://github.com/janedoe/ai-story-generator", label: "GitHub" },
+      { href: "https://fantasybookclub.ai", label: "Website" }
     ],
-    tags: ["gen-ai", "web"]
+    tags: ["n8n", "cursor", "audio-ai", "animation"]
   },
   {
-    title: "Image Remix with ComfyUI",
-    creator: "John Smith",
-    description: "Advanced image-to-image transformations using ComfyUI workflows. Supports style transfer, inpainting, and complex multi-step image generation pipelines.",
-    imageUrl: "/images/comfyui-remix.jpg",
+    title: "Career Amplifier",
+    creator: "Elliot Koss",
+    description: "Daily job discovery from company job boards only, tailored to you. Browse or sign up to receive fresh roles directly from company sites.",
+    imageUrl: "/images/careeramplifier.png",
     links: [
-      { href: "https://github.com/johnsmith/comfyui-remix", label: "GitHub" }
+      { href: "https://careeramplifier.com", label: "Website" }
     ],
-    tags: ["comfyui", "image"]
+    tags: ["cursor", "openai", "react", "node", "python"]
   },
   {
-    title: "Personalized Code Reviewer",
-    creator: "Alex Ray",
-    description: "Claude-powered code linter that learns your team's style guide and provides personalized feedback. Integrates with GitHub Actions for automated code reviews.",
-    imageUrl: "/images/code-reviewer.jpg",
+    title: "Pebble Words",
+    creator: "Rob Strobel",
+    description: "A simple, private app for parents to capture those moments, organize them by child, and revisit them later. No public feeds. No followers. Just your family's words, in one place.",
+    imageUrl: "/images/pebble_words.png",
     links: [
-      { href: "https://github.com/alexray/code-reviewer-ai", label: "GitHub" }
+      { href: "https://www.pebblewords.com/", label: "Website" }
     ],
-    tags: ["devtools", "agents"]
-  }
+    tags: ["vercel", "chatgpt", "vs-code"]
+  },
+  {
+    title: "RecapVid",
+    creator: "Elliot Koss",
+    description: "A fun tool to generate AI videos to roast your fantasy league. Create hilarious recap videos of your fantasy football season using AI-powered video generation.",
+    imageUrl: "/images/recapvid.jpg", // Temporary - using smaller image to test
+    links: [
+      { href: "https://recapvid.com", label: "Website" }
+    ],
+    tags: ["cursor", "react", "node", "openai"]
+  },
+  
 ];

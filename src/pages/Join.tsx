@@ -1,4 +1,5 @@
-import { Calendar, Clock, MapPin, MessageSquare, Github, Users, Code, Coffee } from "lucide-react";
+import { Calendar, Clock, MapPin, MessageSquare, Github, Users, Code, Coffee, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
@@ -23,7 +24,7 @@ const Join = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Meeting Details */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Weekly Meetups</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Monthly Meetups</h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="bg-gradient-card shadow-card">
@@ -41,7 +42,7 @@ const Join = () => {
                   {SITE.meeting.when}
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Recurring weekly sessions
+                  Recurring monthly sessions
                 </p>
               </CardContent>
             </Card>
@@ -63,6 +64,46 @@ const Join = () => {
                 <p className="text-sm text-muted-foreground mt-1">
                   Voice and video chat
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* First Monthly Event */}
+        <div className="mb-16">
+          <div className="max-w-3xl mx-auto">
+            <Card className="bg-gradient-primary shadow-card border-2 border-primary/20">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold text-foreground mb-4">
+                    🎉 First Monthly Event - January 2025
+                  </h2>
+                  <div className="space-y-3 text-foreground/90 mb-6">
+                    <div className="flex items-center justify-center gap-2 text-lg">
+                      <Calendar className="h-5 w-5" />
+                      <span className="font-semibold">Thu, Jan 22, 2025</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2 text-lg">
+                      <Clock className="h-5 w-5" />
+                      <span className="font-semibold">7pm ET</span>
+                    </div>
+                  </div>
+                  <div className="bg-card/40 rounded-lg p-6 backdrop-blur-sm mb-6">
+                    <h3 className="text-xl font-semibold text-foreground mb-3">
+                      Featuring: Michael Pfaffenberger
+                    </h3>
+                    <p className="text-foreground/90">
+                      Founder of <span className="font-semibold">Code Puppy</span> will demo his powerful 
+                      alternative to Claude Code that's been adopted by companies including <span className="font-semibold">Walmart</span>.
+                    </p>
+                  </div>
+                  <Button size="lg" variant="secondary" asChild>
+                    <Link to="/events">
+                      Register for Event
+                      <ArrowRight className="h-5 w-5 ml-2" />
+                    </Link>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -179,7 +220,7 @@ const Join = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Share your work with the community during our weekly meetups. Whether it's a quick demo or 
+                  Share your work with the community during our monthly meetups. Whether it's a quick demo or 
                   a deep technical discussion, all contributions are welcome.
                 </p>
                 <Button variant="outline" asChild>
@@ -198,20 +239,20 @@ const Join = () => {
           <div className="bg-gradient-primary rounded-lg p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90" />
             <div className="relative">
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-lg text-white/90 mb-6">
+              <p className="text-lg text-foreground/90 mb-6">
                 Join our vibrant community of AI builders and learners today!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
+                <Button size="lg" variant="secondary" asChild>
                   <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
                     <MessageSquare className="h-5 w-5 mr-2" />
                     Join Discord
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
+                <Button size="lg" variant="secondary" asChild>
                   <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5 mr-2" />
                     View on GitHub

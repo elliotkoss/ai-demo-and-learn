@@ -120,9 +120,9 @@ const Projects = () => {
                 Simply submit a PR to our GitHub repository.
               </p>
               <Button asChild>
-                <a href={`${SITE.githubRepo}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://github.com/elliotkoss/ai-demo-and-learn`} target="_blank" rel="noopener noreferrer">
                   <GitPullRequest className="h-4 w-4 mr-2" />
-                  Learn How to Contribute
+                  Contribute to our Github
                 </a>
               </Button>
             </div>

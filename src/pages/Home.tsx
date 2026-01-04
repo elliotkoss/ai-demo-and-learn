@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MessageSquare, Github, Users, Code, Lightbulb, ArrowRight } from "lucide-react";
+import { MessageSquare, Github, Users, Code, Lightbulb, ArrowRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
@@ -25,30 +25,30 @@ const Home = () => {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center space-y-8">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 {SITE.title}
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
                 {SITE.tagline}
               </p>
-              <p className="text-lg text-white/80 max-w-2xl mx-auto">
+              <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
                 {SITE.description}
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90 shadow-glow">
+              <Button size="lg" asChild>
+                <Link to="/events">
+                  <Calendar className="h-5 w-5 mr-2" />
+                  Join Next Event
+                </Link>
+              </Button>
+              <Button size="lg" variant="secondary" asChild>
                 <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="h-5 w-5 mr-2" />
                   Join Discord
                 </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="border-white/30 text-white hover:bg-white/10">
-                <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5 mr-2" />
-                  Contribute on GitHub
-                </a>
-              </Button>
+              </Button>              
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Home = () => {
             <Card className="bg-gradient-card shadow-card">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 mx-auto text-primary mb-4" />
-                <h3 className="text-xl font-semibold text-card-foreground">Weekly Meetups</h3>
+                <h3 className="text-xl font-semibold text-card-foreground">Monthly Meetups</h3>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground">
@@ -98,7 +98,7 @@ const Home = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground">
-                  Collaborate on real-world use cases and offer consulting services powered by our collective expertise.
+                  Collaborate on real-world use cases and ask questions to the community to grow your knowledge.
                 </p>
               </CardContent>
             </Card>
@@ -168,24 +168,18 @@ const Home = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
         
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ready to Join Our Community?
           </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/90 mb-8 max-w-2xl mx-auto">
             Connect with fellow AI enthusiasts, share your projects, and learn together in our friendly community.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
+            <Button size="lg" variant="secondary" asChild>
               <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="h-5 w-5 mr-2" />
                 Join Discord
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" asChild className="border-white/30 text-white hover:bg-white/10">
-              <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 mr-2" />
-                Contribute on GitHub
               </a>
             </Button>
           </div>

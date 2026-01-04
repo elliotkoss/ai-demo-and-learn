@@ -1,4 +1,5 @@
-import { Github, MessageSquare, Heart } from "lucide-react";
+import { Github, MessageSquare, Heart, GitPullRequest } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/config";
 
@@ -15,6 +16,12 @@ const Footer = () => {
 
           {/* Social links */}
           <div className="flex items-center space-x-4">
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/contributing" className="flex items-center space-x-2">
+                <GitPullRequest className="h-4 w-4" />
+                <span>Contribute</span>
+              </Link>
+            </Button>
             <Button variant="ghost" size="sm" asChild>
               <a 
                 href={SITE.discordUrl} 

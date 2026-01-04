@@ -2,7 +2,89 @@
 
 A modern, community-driven website for the AI Demo & Learn community. Built with React, TypeScript, and TailwindCSS for a beautiful, responsive experience.
 
-## 🚀 Quick Start
+## 🚀 Quick Start with Docker
+
+To make setup fast and painless, this project includes a pre-configured `Dockerfile` so you can spin up a local development environment with hot reload support.
+
+---
+
+### 🐳 Prerequisites
+
+Make sure you have Docker installed and running on your machine.  
+If not, ask ChatGPT, Claude, Perplexity, or your favorite IDE how to install it.
+
+Also, navigate to the project directory.
+
+---
+
+### ⚙️ 1. Build the Docker Image
+
+```bash
+docker build -t react-app .
+```
+
+---
+
+### 🔁 2. Run the Docker Container (with Hot Reloading)
+
+*********
+🚨 If you run into an issue where Docker tells you something is already running at that port, look at step #5.
+*********
+
+**macOS/Linux:**
+```bash
+docker run --rm -p 8080:8080 -v $(pwd):/app -e CHOKIDAR_USEPOLLING=true react-app
+```
+
+**Windows (cmd):**
+```bash
+docker run --rm -p 8080:8080 -v %cd%:/app -e CHOKIDAR_USEPOLLING=true react-app
+```
+
+**Windows (PowerShell):**
+```bash
+docker run --rm -p 8080:8080 -v ${PWD}:/app -e CHOKIDAR_USEPOLLING=true react-app
+```
+
+This command:
+- Enables page reloading when you change files
+- Automatically installs dependencies
+- Mounts your local project for live editing
+- Cleans up the container when you exit
+
+> 💡 It may take a moment to start on the first run — it's doing some work to make your life easier.
+
+---
+
+### 🌐 3. Open the Site
+
+Visit: [http://localhost:8080](http://localhost:8080)
+
+---
+
+### 🛑 4. Stop the Server
+
+To shut down the app and remove the container, press:
+
+```bash
+Ctrl + C
+```
+
+### 5. Stop Container
+
+If your docker container is still running and won't let you run the #2 command, you'll need to find the docker container ID and stop it.
+
+```bash
+docker ps
+```
+
+```bash
+docker stop (containerID)
+```
+
+## Quick Start without Docker
+
+If you use Docker, you can ignore all of this!
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -84,9 +166,8 @@ We welcome contributions from community members! Here's how you can help:
 
 ### Adding Your Project
 
-1. **Fork the repository** on GitHub
-2. **Edit** `src/data/projects.ts`
-3. **Add your project** following this format:
+1. **Edit** `src/data/projects.ts` in the GitHub codebase
+2. **Add your project** following this format:
 
 ```typescript
 {
@@ -102,12 +183,12 @@ We welcome contributions from community members! Here's how you can help:
 }
 ```
 
-4. **Add an image** (optional): Place your project image in `public/images/`
-5. **Submit a pull request** with your changes
+3. **Add an image** (optional): Place your project image in `public/images/`
+4. **Submit a pull request** with your changes
 
 ### Adding AI Resources
 
-1. **Edit** `src/data/resources.ts`
+1. **Edit** `src/data/resources.ts` in the GitHub codebase
 2. **Add your resource** following this format:
 
 ```typescript
@@ -178,7 +259,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙋‍♀️ Questions?
 
-- **Join our Discord**: [https://discord.gg/uUvVnnkPur](https://discord.gg/uUvVnnkPur)
+- **Join our Discord**: [https://discord.gg/THrSF2hZQa](https://discord.gg/THrSF2hZQa) - Ask Elliot and the co-founders if you have questions or something is confusing!
 - **GitHub Issues**: For bug reports and feature requests
 - **Email**: Contact elliot@teqcrew.com for other inquiries
 
