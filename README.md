@@ -166,9 +166,8 @@ We welcome contributions from community members! Here's how you can help:
 
 ### Adding Your Project
 
-1. **Fork the repository** on GitHub
-2. **Edit** `src/data/projects.ts`
-3. **Add your project** following this format:
+1. **Edit** `src/data/projects.ts` in the GitHub codebase
+2. **Add your project** following this format:
 
 ```typescript
 {
@@ -184,12 +183,12 @@ We welcome contributions from community members! Here's how you can help:
 }
 ```
 
-4. **Add an image** (optional): Place your project image in `public/images/`
-5. **Submit a pull request** with your changes
+3. **Add an image** (optional): Place your project image in `public/images/`
+4. **Submit a pull request** with your changes
 
 ### Adding AI Resources
 
-1. **Edit** `src/data/resources.ts`
+1. **Edit** `src/data/resources.ts` in the GitHub codebase
 2. **Add your resource** following this format:
 
 ```typescript
@@ -260,7 +259,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙋‍♀️ Questions?
 
-- **Join our Discord**: [https://discord.gg/uUvVnnkPur](https://discord.gg/uUvVnnkPur)
+- **Join our Discord**: [https://discord.gg/THrSF2hZQa](https://discord.gg/THrSF2hZQa) - Ask Elliot and the co-founders if you have questions or something is confusing!
 - **GitHub Issues**: For bug reports and feature requests
 - **Email**: Contact elliot@teqcrew.com for other inquiries
 

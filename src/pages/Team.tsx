@@ -16,6 +16,7 @@ const founders: Founder[] = [
   { name: "Jenna Adams-Valadez", linkedin: "https://www.linkedin.com/in/jenna-adams-valadez" },
   { name: "Kati McCoy", linkedin: "https://www.linkedin.com/in/katimccoy/" },
   { name: "Shadin Cornelio", linkedin: "https://www.linkedin.com/in/shadincornelio" },
+  { name: "Zachary Nelson", linkedin: "https://www.linkedin.com/in/zacharynelson/" },
 ];
 
 const Team = () => {

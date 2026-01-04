@@ -14,7 +14,7 @@ export const resources: Resource[] = [
     deals: [
       { 
         description: "Lenny's Podcast perk (verify)",
-        url: "https://lovable.dev/lenny"
+        url: "https://www.lennysnewsletter.com/p/productpass"
       }
     ],
     tags: ["no-code", "web"]
@@ -24,6 +24,12 @@ export const resources: Resource[] = [
     url: "https://cursor.sh",
     description: "AI-first code editor that understands your codebase. Features intelligent autocomplete, code generation, and natural language editing.",
     tags: ["devtools", "agents"]
+  },
+  {
+    name: "Code Puppy",
+    url: "https://code-puppy.dev",
+    description: "Open-source, multi-model AI code agent for your terminal. Generate, explain, and modify code using OpenAI, Gemini, and more - no bloated IDEs or expensive tools needed.",
+    tags: ["devtools", "agents", "open-source", "cli"]
   },
   {
     name: "OpenAI API",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, MessageSquare } from "lucide-react";
+import { Menu, X, Github, MessageSquare, Calendar } from "lucide-react";
 import { SITE } from "@/config";
 
 const Header = () => {
@@ -12,6 +12,7 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
     { href: "/resources", label: "Resources" },
+    { href: "/events", label: "Events" },
     { href: "/team", label: "Team" },
     { href: "/consulting", label: "Consulting" }
   ];
@@ -59,15 +60,20 @@ const Header = () => {
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-2">
             <Button variant="ghost" size="sm" asChild>
-              <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
+              <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer" title="Join Discord">
+                <MessageSquare className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer" title="View GitHub">
                 <Github className="h-4 w-4" />
               </a>
             </Button>
             <Button size="sm" asChild>
-              <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
-                <MessageSquare className="h-4 w-4 mr-2" />
-                Join Discord
-              </a>
+              <Link to="/events">
+                <Calendar className="h-4 w-4 mr-2" />
+                Join Next Event
+              </Link>
             </Button>
           </div>
 
@@ -100,17 +106,23 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <div className="flex items-center space-x-2 pt-2">
-                <Button variant="ghost" size="sm" asChild>
-                  <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 mr-2" />
-                    GitHub
-                  </a>
+              <div className="flex flex-col space-y-2 pt-2">
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link to="/events" onClick={() => setIsMenuOpen(false)}>
+                    <Calendar className="h-4 w-4 mr-2" />
+                    Join Next Event
+                  </Link>
                 </Button>
-                <Button size="sm" asChild>
+                <Button size="sm" asChild className="w-full">
                   <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
                     <MessageSquare className="h-4 w-4 mr-2" />
                     Discord
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="w-full">
+                  <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4 mr-2" />
+                    GitHub
                   </a>
                 </Button>
               </div>

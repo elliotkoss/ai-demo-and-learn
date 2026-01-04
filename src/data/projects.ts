@@ -20,16 +20,6 @@ export const projects: Project[] = [
     tags: ["n8n", "cursor", "audio-ai", "animation"]
   },
   {
-    title: "RecapVid",
-    creator: "Elliot Koss",
-    description: "A fun tool to generate AI videos to roast your fantasy league. Create hilarious recap videos of your fantasy football season using AI-powered video generation.",
-    imageUrl: "/images/recapvid.jpg", // Temporary - using smaller image to test
-    links: [
-      { href: "https://recapvid.com", label: "Website" }
-    ],
-    tags: ["cursor", "react", "node", "openai"]
-  },
-  {
     title: "Career Amplifier",
     creator: "Elliot Koss",
     description: "Daily job discovery from company job boards only, tailored to you. Browse or sign up to receive fresh roles directly from company sites.",
@@ -38,6 +28,26 @@ export const projects: Project[] = [
       { href: "https://careeramplifier.com", label: "Website" }
     ],
     tags: ["cursor", "openai", "react", "node", "python"]
+  },
+  {
+    title: "Pebble Words",
+    creator: "Rob Strobel",
+    description: "A simple, private app for parents to capture those moments, organize them by child, and revisit them later. No public feeds. No followers. Just your family's words, in one place.",
+    imageUrl: "/images/pebble_words.png",
+    links: [
+      { href: "https://www.pebblewords.com/", label: "Website" }
+    ],
+    tags: ["vercel", "chatgpt", "vs-code"]
+  },
+  {
+    title: "RecapVid",
+    creator: "Elliot Koss",
+    description: "A fun tool to generate AI videos to roast your fantasy league. Create hilarious recap videos of your fantasy football season using AI-powered video generation.",
+    imageUrl: "/images/recapvid.jpg", // Temporary - using smaller image to test
+    links: [
+      { href: "https://recapvid.com", label: "Website" }
+    ],
+    tags: ["cursor", "react", "node", "openai"]
   },
   
 ];

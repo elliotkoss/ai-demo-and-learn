@@ -15,11 +15,11 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
             {title}
           </h1>
           {description && (
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto leading-relaxed">
               {description}
             </p>
           )}

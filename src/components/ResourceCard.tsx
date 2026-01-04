@@ -49,11 +49,14 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
                       {deal.description}
                     </p>
                     {deal.url && (
-                      <Button variant="ghost" size="sm" asChild className="h-auto p-0 text-xs text-warning hover:text-warning">
-                        <a href={deal.url} target="_blank" rel="noopener noreferrer">
-                          Learn more →
-                        </a>
-                      </Button>
+                      <a 
+                        href={deal.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-xs text-warning hover:text-warning/80 underline-offset-2 hover:underline inline-block"
+                      >
+                        Learn more →
+                      </a>
                     )}
                   </div>
                 </div>
