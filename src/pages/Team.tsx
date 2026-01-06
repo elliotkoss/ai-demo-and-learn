@@ -24,7 +24,7 @@ const Team = () => {
     <MainLayout>
       <PageHeader title="Founding Team" description="Meet the folks behind AI Demo & Learn" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto py-12">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {founders.map((member) => (
             <div key={member.linkedin} className="bg-gradient-card shadow-card rounded-lg p-6">

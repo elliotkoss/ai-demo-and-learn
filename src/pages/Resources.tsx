@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { Plus, GitPullRequest } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Plus, GitPullRequest, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
 import PageHeader from "@/components/PageHeader";
@@ -53,7 +54,7 @@ const Resources = () => {
         description="Curated collection of essential AI tools, platforms, and resources recommended by our community. Discover new tools and exclusive deals."
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto py-12">
         {/* Search and Filters */}
         <div className="space-y-6 mb-8">
           <SearchInput
@@ -132,12 +133,20 @@ const Resources = () => {
                 Help expand our resource collection! Share your favorite AI tools, platforms, 
                 or services with the community.
               </p>
-              <Button asChild>
-                <a href={`${SITE.githubRepo}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noopener noreferrer">
-                  <GitPullRequest className="h-4 w-4 mr-2" />
-                  Add a Resource
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild>
+                  <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Tell Us on Discord
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link to="/contribute">
+                    <GitPullRequest className="h-4 w-4 mr-2" />
+                    Submit a Pull Request
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}

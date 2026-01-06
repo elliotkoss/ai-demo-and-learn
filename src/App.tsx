@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -10,7 +10,7 @@ import Resources from "./pages/Resources";
 import Team from "./pages/Team";
 import Consulting from "./pages/Consulting";
 import Event from "./pages/Event";
-import Contributing from "./pages/Contributing";
+import Contribute from "./pages/Contribute";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +29,8 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/events" element={<Event />} />
-          <Route path="/contributing" element={<Contributing />} />
+          <Route path="/contribute" element={<Contribute />} />
+          <Route path="/contributing" element={<Navigate to="/contribute" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

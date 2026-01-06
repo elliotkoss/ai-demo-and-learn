@@ -54,7 +54,7 @@ const Projects = () => {
         description="Explore innovative AI projects built by our community members. From experimental demos to production-ready applications."
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto py-12">
         {/* Search and Filters */}
         <div className="space-y-6 mb-8">
           <SearchInput

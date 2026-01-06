@@ -6,7 +6,7 @@ import { SITE } from "@/config";
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-card/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="container mx-auto py-8">
         <div className="flex flex-col items-center space-y-4">
           {/* Main footer text */}
           <div className="flex items-center space-x-2 text-muted-foreground">
@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Social links */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm" asChild>
-              <Link to="/contributing" className="flex items-center space-x-2">
+              <Link to="/contribute" className="flex items-center space-x-2">
                 <GitPullRequest className="h-4 w-4" />
                 <span>Contribute</span>
               </Link>

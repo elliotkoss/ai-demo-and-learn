@@ -65,7 +65,7 @@ const Event = () => {
         description="Join our monthly meetups on the last Thursday of each month featuring live demos, AI discussions, and hands-on learning"
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto py-12">
         {/* Event Calendar */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
