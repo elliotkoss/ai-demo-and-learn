@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
-import { Plus, GitPullRequest } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Plus, GitPullRequest, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MainLayout from "@/components/MainLayout";
 import PageHeader from "@/components/PageHeader";
@@ -99,12 +100,20 @@ const Projects = () => {
                 : "Be the first to add a project to our community showcase!"
               }
             </p>
-            <Button asChild>
-              <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
-                <GitPullRequest className="h-4 w-4 mr-2" />
-                Contribute Your Project
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild>
+                <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-4 w-4 mr-2" />
+                  Tell Us on Discord
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/contribute">
+                  <GitPullRequest className="h-4 w-4 mr-2" />
+                  Submit a Pull Request
+                </Link>
+              </Button>
+            </div>
           </div>
         )}
 
@@ -119,12 +128,20 @@ const Projects = () => {
                 Built something awesome with AI? Add it to our community showcase! 
                 Simply submit a PR to our GitHub repository.
               </p>
-              <Button asChild>
-                <a href={`https://github.com/elliotkoss/ai-demo-and-learn`} target="_blank" rel="noopener noreferrer">
-                  <GitPullRequest className="h-4 w-4 mr-2" />
-                  Contribute to our Github
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild>
+                  <a href={SITE.discordUrl} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Tell Us on Discord
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link to="/contribute">
+                    <GitPullRequest className="h-4 w-4 mr-2" />
+                    Submit a Pull Request
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}
