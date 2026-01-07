@@ -22,7 +22,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(56,189,248,0.1),transparent_50%)]" />
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative container mx-auto py-24">
           <div className="text-center space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
@@ -56,7 +56,7 @@ const Home = () => {
 
       {/* About Section */}
       <section className="py-16 bg-background/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               About Our Community
@@ -108,7 +108,7 @@ const Home = () => {
 
       {/* Featured Projects */}
       <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -136,7 +136,7 @@ const Home = () => {
 
       {/* Featured Resources */}
       <section className="py-16 bg-background/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -167,7 +167,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]" />
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ready to Join Our Community?
           </h2>

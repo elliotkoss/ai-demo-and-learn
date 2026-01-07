@@ -6,11 +6,11 @@ import MainLayout from "@/components/MainLayout";
 import PageHeader from "@/components/PageHeader";
 import { SITE } from "@/config";
 
-const Contributing = () => {
+const Contribute = () => {
   return (
     <MainLayout>
       <PageHeader 
-        title="Contributing to AI Demo & Learn"
+        title="Contribute to AI Demo & Learn"
         description="Help us grow this community by adding your projects, suggesting improvements, and sharing resources."
       >
         <Button size="lg" asChild className="bg-white text-primary hover:bg-white/90 shadow-glow">
@@ -21,7 +21,7 @@ const Contributing = () => {
         </Button>
       </PageHeader>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto py-12">
         {/* Important Notice */}
         <Alert className="mb-12 max-w-3xl mx-auto border-warning/50 bg-warning/10">
           <AlertCircle className="h-4 w-4 text-warning" />
@@ -235,4 +235,4 @@ const Contributing = () => {
   );
 };
 
-export default Contributing;
+export default Contribute;
