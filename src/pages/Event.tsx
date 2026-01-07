@@ -13,6 +13,7 @@ type EventData = {
   date: string;
   time: string;
   speaker: string;
+  speakerLinkedin?: string;
   description: string;
   topics: string[];
 };
@@ -22,9 +23,10 @@ const upcomingEvents: EventData[] = [
   {
     id: "jan-2025",
     title: "Code Puppy Live Demo",
-    date: "Thursday, January 22, 2025",
+    date: "Thursday, January 29, 2025",
     time: "7:00 PM ET",
     speaker: "Michael Pfaffenberger",
+    speakerLinkedin: "https://www.linkedin.com/in/michael-pfaffenberger-a3b23657/",
     description: "Discover Code Puppy, a powerful alternative to Claude Code that's been adopted by companies including Walmart. This AI-based terminal tool supports multiple models, is completely open source, and can transform your development workflow.",
     topics: [
       "Multi-model AI support (OpenAI, Gemini, and more)",
@@ -118,7 +120,19 @@ const Event = () => {
                       <div className="flex items-center gap-2 text-muted-foreground mb-4">
                         <Users className="h-4 w-4" />
                         <span className="text-sm">
-                          <strong className="text-foreground">Speaker:</strong> {event.speaker}
+                          <strong className="text-foreground">Speaker:</strong>{" "}
+                          {event.speakerLinkedin ? (
+                            <a
+                              href={event.speakerLinkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline"
+                            >
+                              {event.speaker}
+                            </a>
+                          ) : (
+                            event.speaker
+                          )}
                         </span>
                       </div>
 
