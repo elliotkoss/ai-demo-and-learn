@@ -81,7 +81,7 @@ const Join = () => {
                   <div className="space-y-3 text-foreground/90 mb-6">
                     <div className="flex items-center justify-center gap-2 text-lg">
                       <Calendar className="h-5 w-5" />
-                      <span className="font-semibold">Thu, Jan 22, 2025</span>
+                      <span className="font-semibold">Thu, Jan 29, 2025</span>
                     </div>
                     <div className="flex items-center justify-center gap-2 text-lg">
                       <Clock className="h-5 w-5" />
