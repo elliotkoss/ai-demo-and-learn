@@ -5,8 +5,8 @@ export const SITE = {
   discordUrl: "https://discord.gg/THrSF2hZQa",
   githubRepo: "https://github.com/elliotkoss/ai-demo-and-learn",
   meeting: {
-    when: "Last Thursday of the month @ 7:00 PM ET",
-    where: "Discord / Zoom"
+    when: "Last Thursday of the month @ 6 PM ET",
+    where: "Zoom"
   },
   consultingEmail: "elliot@teqcrew.com",
   contactName: "Elliot"
