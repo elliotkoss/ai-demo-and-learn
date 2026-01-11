@@ -27,10 +27,10 @@ type EventData = {
 // Upcoming events data
 const upcomingEvents: EventData[] = [
   {
-    id: "jan-2025",
+    id: "jan-2026",
     title: "Code Puppy Live Demo",
-    date: "Thursday, January 29, 2025",
-    time: "7:00 PM ET",
+    date: "Thursday, January 29, 2026",
+    time: "6 PM ET",
     speaker: "Michael Pfaffenberger",
     speakerLinkedin: "https://www.linkedin.com/in/michael-pfaffenberger-a3b23657/",
     description: "Discover Code Puppy, a powerful alternative to Claude Code that's been adopted by companies including Walmart. This AI-based terminal tool supports multiple models, is completely open source, and can transform your development workflow.",
@@ -42,19 +42,19 @@ const upcomingEvents: EventData[] = [
     ]
   },
   {
-    id: "feb-2025",
+    id: "feb-2026",
     title: "TBD - February Event",
-    date: "Thursday, February 27, 2025",
-    time: "7:00 PM ET",
+    date: "Thursday, February 26, 2026",
+    time: "6 PM ET",
     speaker: "To Be Announced",
     description: "Join us for our February monthly event. Speaker and topic to be announced soon! Join Discord or sign up for our newsletter to get notified.",
     topics: ["Details coming soon"]
   },
   {
-    id: "mar-2025",
+    id: "mar-2026",
     title: "TBD - March Event",
-    date: "Thursday, March 27, 2025",
-    time: "7:00 PM ET",
+    date: "Thursday, March 26, 2026",
+    time: "6 PM ET",
     speaker: "To Be Announced",
     description: "Join us for our March monthly event. Speaker and topic to be announced soon! Join Discord or sign up for our newsletter to get notified.",
     topics: ["Details coming soon"]
@@ -145,14 +145,14 @@ const Event = () => {
 
                       <div className="flex items-center gap-2 text-muted-foreground mb-4">
                         <MapPin className="h-4 w-4" />
-                        <span className="text-sm">Discord / Zoom (link via signup or Discord)</span>
+                        <span className="text-sm">Zoom (link via signup or Discord community)</span>
                       </div>
 
                       <p className="text-muted-foreground mb-4">
                         {event.description}
                       </p>
                       
-                      {event.id === "jan-2025" && (
+                      {event.id === "jan-2026" && (
                         <div className="mb-4">
                           <a 
                             href="https://code-puppy.dev" 
