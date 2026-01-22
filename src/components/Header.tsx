@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, MessageSquare, Calendar } from "lucide-react";
+import { Menu, X, Github, MessageSquare, Calendar, Linkedin } from "lucide-react";
 import { SITE } from "@/config";
 
 const Header = () => {
@@ -15,6 +15,7 @@ const Header = () => {
     { href: "/events", label: "Events" },
     { href: "/team", label: "Team" },
     { href: "/contribute", label: "Contribute" },
+    { href: "/sponsors", label: "Sponsors" },
     { href: "/consulting", label: "Consulting" }
   ];
 
@@ -68,6 +69,11 @@ const Header = () => {
             <Button variant="ghost" size="sm" asChild>
               <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer" title="View GitHub">
                 <Github className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer" title="Join LinkedIn Group">
+                <Linkedin className="h-4 w-4" />
               </a>
             </Button>
             <Button size="sm" asChild>
@@ -124,6 +130,12 @@ const Header = () => {
                   <a href={SITE.githubRepo} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4 mr-2" />
                     GitHub
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="w-full">
+                  <a href={SITE.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    LinkedIn
                   </a>
                 </Button>
               </div>

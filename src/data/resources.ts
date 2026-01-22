@@ -4,9 +4,17 @@ export type Resource = {
   description: string;
   deals?: { description: string; url?: string }[];
   tags?: string[];
+  isSponsor?: boolean;
 };
 
 export const resources: Resource[] = [
+  {
+    name: "Synthetic",
+    url: "https://synthetic.new",
+    description: "Managed platform for running open-source language models in secure US and EU datacenters. Privacy-first infrastructure that never trains on your data—just paste a Hugging Face link and deploy any supported LLM.",
+    tags: ["api", "models", "open-source", "infrastructure"],
+    isSponsor: true
+  },
   {
     name: "Lovable",
     url: "https://lovable.dev",

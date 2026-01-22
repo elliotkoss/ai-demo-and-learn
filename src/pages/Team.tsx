@@ -17,9 +17,9 @@ type Founder = {
 
 const founders: Founder[] = [
   { name: "Elliot Koss", linkedin: "https://www.linkedin.com/in/elliotkoss", website: "https://elliotkoss.com", tags: ["Founder", "Steering Committee"] },
-  { name: "Rob Strobel", linkedin: "https://www.linkedin.com/in/rstrobel/", tags: ["Founder", "Steering Committee"] },
-  { name: "Jenna Adams-Valadez", linkedin: "https://www.linkedin.com/in/jenna-adams-valadez", tags: ["Co-Founder", "Steering Committee"] },
-  { name: "Amanda Unterreiner", linkedin: "https://www.linkedin.com/in/amanda-unterreiner-cfa-mba/", tags: ["Co-Founder"] },
+  { name: "Rob Strobel", linkedin: "https://www.linkedin.com/in/rstrobel/", website: "https://www.pebblewords.com/", tags: ["Founder", "Steering Committee"] },
+  { name: "Jenna Adams-Valadez", linkedin: "https://www.linkedin.com/in/jenna-adams-valadez", website: "https://theleaneye.com/", tags: ["Co-Founder", "Steering Committee"] },
+  { name: "Amanda Unterreiner", linkedin: "https://www.linkedin.com/in/amanda-unterreiner-cfa-mba/", website: "https://viaterra.io/", tags: ["Co-Founder"] },
   { name: "Ben Faust", linkedin: "https://www.linkedin.com/in/benjamin-faust/", tags: ["Co-Founder"] },
   { name: "David Farrell", linkedin: "https://www.linkedin.com/in/davidpfarrell/", tags: ["Co-Founder"] },
   { name: "Heneu Tan", linkedin: "https://www.linkedin.com/in/heneu-tan-8bab8219/", tags: ["Co-Founder"] },

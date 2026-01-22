@@ -5,13 +5,17 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
 import ProjectCard from "@/components/ProjectCard";
 import ResourceCard from "@/components/ResourceCard";
+import SponsorBanner from "@/components/SponsorBanner";
 import { SITE } from "@/config";
 import { projects } from "@/data/projects";
 import { resources } from "@/data/resources";
 
 const Home = () => {
   const featuredProjects = projects.slice(0, 3);
-  const featuredResources = resources.slice(0, 4);
+  const featuredResources = [
+    ...resources.filter(r => r.isSponsor),
+    ...resources.filter(r => !r.isSponsor)
+  ].slice(0, 4);
 
   return (
     <MainLayout>
@@ -53,6 +57,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Sponsor Section */}
+      <SponsorBanner />
 
       {/* About Section */}
       <section className="py-16 bg-background/50">

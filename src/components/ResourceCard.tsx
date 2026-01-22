@@ -1,4 +1,4 @@
-import { ExternalLink, Gift } from "lucide-react";
+import { ExternalLink, Gift, Star } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,16 +13,24 @@ const ResourceCard = ({ resource }: ResourceCardProps) => {
     <Card className="group h-full bg-gradient-card shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-1">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
-          <h3 className="font-semibold text-lg leading-tight text-card-foreground">
-            <a
-              href={resource.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline underline-offset-2"
-            >
-              {resource.name}
-            </a>
-          </h3>
+          <div className="flex items-center gap-2">
+            <h3 className="font-semibold text-lg leading-tight text-card-foreground">
+              <a
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline underline-offset-2"
+              >
+                {resource.name}
+              </a>
+            </h3>
+            {resource.isSponsor && (
+              <Badge className="text-xs bg-primary/20 text-primary border-primary/30">
+                <Star className="h-3 w-3 mr-1 fill-current" />
+                Sponsor
+              </Badge>
+            )}
+          </div>
           {resource.deals && resource.deals.length > 0 && (
             <Gift className="h-4 w-4 text-warning shrink-0 ml-2" />
           )}

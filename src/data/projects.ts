@@ -40,6 +40,16 @@ export const projects: Project[] = [
     tags: ["vercel", "chatgpt", "vs-code"]
   },
   {
+    title: "Viaterra",
+    creator: "Amanda Unterreiner",
+    description: "Enables individuals and organizations to navigate global relocation by matching priorities with trusted proprietary data on visas, taxes, healthcare, and quality of life. Replaces slow, manual research with guided workflows that support both decision-making and execution.",
+    imageUrl: "/images/viaterra.png",
+    links: [
+      { href: "https://viaterra.io/", label: "Website" }
+    ],
+    tags: ["cursor", "vs-code", "vercel"]
+  },
+  {
     title: "RecapVid",
     creator: "Elliot Koss",
     description: "A fun tool to generate AI videos to roast your fantasy league. Create hilarious recap videos of your fantasy football season using AI-powered video generation.",
@@ -49,5 +59,4 @@ export const projects: Project[] = [
     ],
     tags: ["cursor", "react", "node", "openai"]
   },
-  
 ];
