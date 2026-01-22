@@ -1,4 +1,4 @@
-import { Github, MessageSquare, Heart, GitPullRequest } from "lucide-react";
+import { Github, MessageSquare, Heart, GitPullRequest, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/config";
@@ -34,9 +34,9 @@ const Footer = () => {
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
-              <a 
-                href={SITE.githubRepo} 
-                target="_blank" 
+              <a
+                href={SITE.githubRepo}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
               >
@@ -44,11 +44,22 @@ const Footer = () => {
                 <span>GitHub</span>
               </a>
             </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a
+                href={SITE.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
+              </a>
+            </Button>
           </div>
 
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} {SITE.title}. Open source and community driven.
+            © 2025–{new Date().getFullYear()} {SITE.title}. Open source and community driven.
           </div>
         </div>
       </div>
