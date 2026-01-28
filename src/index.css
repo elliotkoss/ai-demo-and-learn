@@ -6,28 +6,28 @@
 
 @layer base {
   :root {
-    /* Core backgrounds - true medium grey theme */
-    --background: 240 5% 78%;
+    /* Core backgrounds - light theme */
+    --background: 240 5% 96%;
     --foreground: 240 10% 15%;
-    
+
     /* Card and surfaces */
-    --card: 240 5% 85%;
+    --card: 240 5% 100%;
     --card-foreground: 240 10% 15%;
-    
+
     /* Popover and overlays */
-    --popover: 240 5% 85%;
+    --popover: 240 5% 100%;
     --popover-foreground: 240 10% 15%;
-    
+
     /* Primary - vibrant purple */
     --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    
+
     /* Secondary - subtle grey for less prominence */
-    --secondary: 240 4% 65%;
+    --secondary: 240 4% 90%;
     --secondary-foreground: 240 10% 15%;
-    
+
     /* Muted elements */
-    --muted: 240 4% 70%;
+    --muted: 240 4% 92%;
     --muted-foreground: 240 6% 25%;
     
     /* Accent - bright blue */
@@ -39,14 +39,14 @@
     --destructive-foreground: 0 0% 100%;
     
     /* Borders and inputs */
-    --border: 240 6% 60%;
-    --input: 240 6% 85%;
+    --border: 240 6% 87%;
+    --input: 240 6% 91%;
     --ring: 262 83% 58%;
 
     /* Custom gradients */
     --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(200 98% 39%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 85% 60%) 50%, hsl(200 98% 39%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(240 5% 85%) 0%, hsl(240 5% 82%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240 5% 100%) 0%, hsl(240 5% 97%) 100%);
     
     /* Special colors */
     --success: 142 76% 36%;
@@ -62,20 +62,20 @@
   }
 
   .light {
-    /* Light mode overrides (not used, but kept for compatibility) */
-    --background: 240 5% 78%;
+    /* Light mode overrides */
+    --background: 240 5% 96%;
     --foreground: 240 10% 15%;
-    
-    --card: 240 5% 85%;
+
+    --card: 240 5% 100%;
     --card-foreground: 240 10% 15%;
-    
-    --popover: 240 5% 85%;
+
+    --popover: 240 5% 100%;
     --popover-foreground: 240 10% 15%;
-    
+
     --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    
-    --secondary: 240 4% 65%;
+
+    --secondary: 240 4% 90%;
     --secondary-foreground: 240 10% 15%;
     
     --muted: 240 4% 94%;
