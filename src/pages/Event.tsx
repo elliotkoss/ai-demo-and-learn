@@ -1,4 +1,4 @@
-import { Calendar, Clock, MapPin, Users, MessageSquare, ExternalLink, ArrowDown } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
@@ -24,8 +24,8 @@ type EventData = {
   topics: string[];
 };
 
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+// Past events data
+const pastEvents: EventData[] = [
   {
     id: "jan-2026",
     title: "Code Puppy Live Demo",
@@ -40,15 +40,26 @@ const upcomingEvents: EventData[] = [
       "Open source alternative to expensive tools",
       "Live Q&A with the creator"
     ]
-  },
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
   {
     id: "feb-2026",
-    title: "TBD - February Event",
+    title: "Build Your Own GPT: A Live Hands-On Workshop",
     date: "Thursday, February 26, 2026",
     time: "6 PM ET",
-    speaker: "To Be Announced",
-    description: "Join us for our February monthly event. Speaker and topic to be announced soon! Join Discord or sign up for our newsletter to get notified.",
-    topics: ["Details coming soon"]
+    speaker: "Rob Strobel",
+    speakerLinkedin: "https://www.linkedin.com/in/rstrobel/",
+    description: "In this live session, we will design and build a Custom GPT from scratch inside ChatGPT and walk through the thinking behind every decision. You will leave with a working GPT and a clear framework for systemizing your own AI workflows.",
+    topics: [
+      "The difference between prompting and system design",
+      "How to structure a Custom GPT for repeatable workflows",
+      "How to encode your expertise into instructions",
+      "When to use Custom GPTs vs standard prompting",
+      "A practical framework you can apply immediately"
+    ]
   },
   {
     id: "mar-2026",
@@ -152,20 +163,6 @@ const Event = () => {
                         {event.description}
                       </p>
                       
-                      {event.id === "jan-2026" && (
-                        <div className="mb-4">
-                          <a 
-                            href="https://code-puppy.dev" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline font-medium inline-flex items-center gap-1"
-                          >
-                            Learn more about Code Puppy
-                            <ExternalLink className="h-3 w-3" />
-                          </a>
-                        </div>
-                      )}
-
                       {event.topics[0] !== "Details coming soon" && (
                         <div className="mb-6">
                           <h4 className="font-semibold text-foreground text-sm mb-2">What You'll Learn:</h4>
@@ -219,6 +216,87 @@ const Event = () => {
           </div>
         </div>
 
+        {/* Past Events */}
+        {pastEvents.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+              Past Events
+            </h2>
+
+            <div className="space-y-8 max-w-5xl mx-auto">
+              {pastEvents.map((event) => (
+                <Card key={event.id} className="overflow-hidden shadow-md opacity-80">
+                  <CardContent className="p-0">
+                    <div className="grid md:grid-cols-[240px_1fr] gap-0">
+                      {/* Left Column - Date */}
+                      <div className="p-8 flex flex-col justify-center items-center text-center bg-gradient-to-br from-muted/50 to-muted/30">
+                        <div className="inline-block bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-semibold mb-4">
+                          PAST EVENT
+                        </div>
+                        <Calendar className="h-12 w-12 mb-4 text-muted-foreground" />
+                        <div className="text-sm mb-2 text-muted-foreground">
+                          {event.date.split(',')[0]}
+                        </div>
+                        <div className="text-2xl font-bold mb-1 text-foreground">
+                          {event.date.split(',')[1]?.trim()}
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <Clock className="h-4 w-4" />
+                          <span>{event.time}</span>
+                        </div>
+                      </div>
+
+                      {/* Right Column - Details */}
+                      <div className="p-8">
+                        <h3 className="text-2xl font-bold text-foreground mb-3">
+                          {event.title}
+                        </h3>
+
+                        <div className="flex items-center gap-2 text-muted-foreground mb-4">
+                          <Users className="h-4 w-4" />
+                          <span className="text-sm">
+                            <strong className="text-foreground">Speaker:</strong>{" "}
+                            {event.speakerLinkedin ? (
+                              <a
+                                href={event.speakerLinkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:underline inline-flex items-center gap-1"
+                              >
+                                {event.speaker}
+                                <LinkedInLogo className="h-4 w-4 text-[#0A66C2]" />
+                              </a>
+                            ) : (
+                              event.speaker
+                            )}
+                          </span>
+                        </div>
+
+                        <p className="text-muted-foreground mb-4">
+                          {event.description}
+                        </p>
+
+                        {event.topics[0] !== "Details coming soon" && (
+                          <div>
+                            <h4 className="font-semibold text-foreground text-sm mb-2">What Was Covered:</h4>
+                            <ul className="space-y-1">
+                              {event.topics.map((topic, topicIdx) => (
+                                <li key={topicIdx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <span className="text-muted-foreground mt-0.5">•</span>
+                                  <span>{topic}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        )}
 
       </div>
     </MainLayout>
