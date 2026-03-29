@@ -1,4 +1,4 @@
-import { Calendar, Clock, MapPin, Users, ArrowDown } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, ArrowDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
@@ -22,6 +22,7 @@ type EventData = {
   speakerLinkedin?: string;
   description: string;
   topics: string[];
+  videoUrl?: string;
 };
 
 // Past events data
@@ -39,12 +40,9 @@ const pastEvents: EventData[] = [
       "Terminal-based workflow without bloated IDEs",
       "Open source alternative to expensive tools",
       "Live Q&A with the creator"
-    ]
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+    ],
+    videoUrl: "https://youtu.be/D2p_nh5wN0U"
+  },
   {
     id: "feb-2026",
     title: "Build Your Own GPT: A Live Hands-On Workshop",
@@ -59,16 +57,27 @@ const upcomingEvents: EventData[] = [
       "How to encode your expertise into instructions",
       "When to use Custom GPTs vs standard prompting",
       "A practical framework you can apply immediately"
-    ]
-  },
+    ],
+    videoUrl: "https://youtu.be/IUMPNMVF-iU"
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
   {
     id: "mar-2026",
-    title: "TBD - March Event",
+    title: "Setup OpenClaw on a Cloud Server",
     date: "Thursday, March 26, 2026",
     time: "6 PM ET",
-    speaker: "To Be Announced",
-    description: "Join us for our March monthly event. Speaker and topic to be announced soon! Join Discord or sign up for our newsletter to get notified.",
-    topics: ["Details coming soon"]
+    speaker: "Simon Bergeron",
+    speakerLinkedin: "https://www.linkedin.com/in/slbergeron/",
+    description: "Simon will walk us through setting up OpenClaw — an open-source personal AI assistant — on a Digital Ocean Droplet so it runs 24/7 in the cloud. See how to self-host your own AI workspace, connect it to chat apps, and start building agent workflows on your own hardware.",
+    topics: [
+      "What OpenClaw is and why you'd want to self-host it",
+      "Spinning up a Digital Ocean Droplet for OpenClaw",
+      "Connecting OpenClaw to chat apps and integrations",
+      "Building agent workflows on your own infrastructure"
+    ]
   }
 ];
 
@@ -277,7 +286,7 @@ const Event = () => {
                         </p>
 
                         {event.topics[0] !== "Details coming soon" && (
-                          <div>
+                          <div className="mb-6">
                             <h4 className="font-semibold text-foreground text-sm mb-2">What Was Covered:</h4>
                             <ul className="space-y-1">
                               {event.topics.map((topic, topicIdx) => (
@@ -288,6 +297,15 @@ const Event = () => {
                               ))}
                             </ul>
                           </div>
+                        )}
+
+                        {event.videoUrl && (
+                          <Button asChild variant="outline">
+                            <a href={event.videoUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4 mr-2" />
+                              Watch Recording
+                            </a>
+                          </Button>
                         )}
                       </div>
                     </div>

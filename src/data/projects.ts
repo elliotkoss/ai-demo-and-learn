@@ -59,4 +59,44 @@ export const projects: Project[] = [
     ],
     tags: ["cursor", "react", "node", "openai"]
   },
+  {
+    title: "School Day Weather",
+    creator: "Robstro",
+    description: "A practical app that helps parents quickly decide what kids should wear for the school day. Enter your ZIP code and get simple, fast guidance for jackets, layers, and daily outfits so busy mornings feel easier.",
+    imageUrl: "/images/school-day-weather.png",
+    links: [
+      { href: "https://schooldayweather.vercel.app/", label: "Website" }
+    ],
+    tags: ["vs-code", "vercel", "codex"]
+  },
+  {
+    title: "KittyLog",
+    creator: "cell",
+    description: "AI-powered changelog generator for GitHub. Push a release and get polished notes — tailored for developers or end-users, hosted on your domain.",
+    imageUrl: "/images/kittylog.png",
+    links: [
+      { href: "https://kittylog.app/", label: "Website" }
+    ],
+    tags: ["github", "ai", "automation"]
+  },
+  {
+    title: "LLxprt Code",
+    creator: "vybecoder",
+    description: "CLI for long-run autonomous AI coding workflows. Supports multiple providers (Claude, GPT, Gemini, local models), multi-pass development cycles, and runs without telemetry.",
+    imageUrl: "/images/llxprt-code.png",
+    links: [
+      { href: "https://vybestack.dev/llxprt-code.html", label: "Website" }
+    ],
+    tags: ["cli", "open-source", "multi-provider"]
+  },
+  {
+    title: "LLxprt Jefe",
+    creator: "vybecoder",
+    description: "Multi-agent orchestrator with a unified terminal dashboard for managing multiple AI coding agents across different repositories simultaneously.",
+    imageUrl: "/images/llxprt-jefe.png",
+    links: [
+      { href: "https://vybestack.dev/jefe.html", label: "Website" }
+    ],
+    tags: ["cli", "open-source", "agents", "terminal"]
+  },
 ];

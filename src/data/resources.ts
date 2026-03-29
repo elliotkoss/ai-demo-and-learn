@@ -92,5 +92,11 @@ export const resources: Resource[] = [
     url: "https://lmstudio.ai/",
     description: "Local LLM desktop app to run, fine‑tune, and serve open models on your machine with a simple UI and compatible server APIs.",
     tags: ["local-llm", "devtools", "models"]
+  },
+  {
+    name: "OpenClaw",
+    url: "https://openclaw.ai/",
+    description: "Open-source personal AI assistant that runs on your own machine. Integrates with WhatsApp, Telegram, Discord, and iMessage. Features persistent memory, browser control, 50+ integrations, and extensible community skills.",
+    tags: ["open-source", "local-llm", "agents", "self-hosted"]
   }
 ];

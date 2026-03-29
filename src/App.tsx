@@ -10,6 +10,7 @@ import Resources from "./pages/Resources";
 import Team from "./pages/Team";
 import Consulting from "./pages/Consulting";
 import Event from "./pages/Event";
+import Videos from "./pages/Videos";
 import Contribute from "./pages/Contribute";
 import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/events" element={<Event />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/contribute" element={<Contribute />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/contributing" element={<Navigate to="/contribute" replace />} />
