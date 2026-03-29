@@ -59,11 +59,7 @@ const pastEvents: EventData[] = [
       "A practical framework you can apply immediately"
     ],
     videoUrl: "https://youtu.be/IUMPNMVF-iU"
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "mar-2026",
     title: "Setup OpenClaw on a Cloud Server",
@@ -71,12 +67,28 @@ const upcomingEvents: EventData[] = [
     time: "6 PM ET",
     speaker: "Simon Bergeron",
     speakerLinkedin: "https://www.linkedin.com/in/slbergeron/",
-    description: "Simon will walk us through setting up OpenClaw — an open-source personal AI assistant — on a Digital Ocean Droplet so it runs 24/7 in the cloud. See how to self-host your own AI workspace, connect it to chat apps, and start building agent workflows on your own hardware.",
+    description: "Simon will walk us through setting up OpenClaw, an open-source personal AI assistant, on a Digital Ocean Droplet so it runs 24/7 in the cloud. See how to self-host your own AI workspace, connect it to chat apps, and start building agent workflows on your own hardware.",
     topics: [
       "What OpenClaw is and why you'd want to self-host it",
       "Spinning up a Digital Ocean Droplet for OpenClaw",
       "Connecting OpenClaw to chat apps and integrations",
       "Building agent workflows on your own infrastructure"
+    ],
+    videoUrl: "https://youtu.be/CVlIcodlV7I"
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "apr-2026",
+    title: "Details Coming Soon",
+    date: "Thursday, April 16, 2026",
+    time: "7 PM ET",
+    speaker: "TBD",
+    description: "Details for our April event are coming soon. Stay tuned!",
+    topics: [
+      "Details coming soon"
     ]
   }
 ];
@@ -90,7 +102,7 @@ const Event = () => {
     <MainLayout>
       <PageHeader 
         title="Community Events"
-        description="Join our monthly meetups on the last Thursday of each month featuring live demos, AI discussions, and hands-on learning"
+        description="Join our monthly meetups on the 3rd Thursday of each month featuring live demos, AI discussions, and hands-on learning"
       />
 
       <div className="container mx-auto py-12">
