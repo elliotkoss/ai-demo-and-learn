@@ -82,13 +82,17 @@ const pastEvents: EventData[] = [
 const upcomingEvents: EventData[] = [
   {
     id: "apr-2026",
-    title: "Details Coming Soon",
+    title: "Mastering Claude: From Basics to Advanced Workflows",
     date: "Thursday, April 16, 2026",
     time: "7 PM ET",
-    speaker: "TBD",
-    description: "Details for our April event are coming soon. Stay tuned!",
+    speaker: "Dr. Robert Voss",
+    speakerLinkedin: "https://www.linkedin.com/in/ai-robvoss",
+    description: "Join us for a comprehensive overview into the entire Claude ecosystem with Dr. Robert Voss. Whether you're just getting started or looking to unlock advanced capabilities, this session takes you step-by-step through Claude, Claude Code, and Claude Cowork, with hands-on demonstrations, practical workflows, and bonus content you won't want to miss. You are not required to have a paid Claude account. We will discuss the capabilities of free and paid versions of Claude.",
     topics: [
-      "Details coming soon"
+      "Getting started with Claude: prompting fundamentals and best practices",
+      "Introduction to Claude Code for terminal-based AI-assisted development",
+      "Using Claude Cowork for non-developers to automate files and tasks",
+      "Advanced techniques: chaining workflows, system prompts, and agentic tasks"
     ]
   }
 ];
