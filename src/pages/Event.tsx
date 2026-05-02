@@ -75,11 +75,7 @@ const pastEvents: EventData[] = [
       "Building agent workflows on your own infrastructure"
     ],
     videoUrl: "https://youtu.be/CVlIcodlV7I"
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "apr-2026",
     title: "Mastering Claude: From Basics to Advanced Workflows",
@@ -93,6 +89,26 @@ const upcomingEvents: EventData[] = [
       "Introduction to Claude Code for terminal-based AI-assisted development",
       "Using Claude Cowork for non-developers to automate files and tasks",
       "Advanced techniques: chaining workflows, system prompts, and agentic tasks"
+    ],
+    videoUrl: "https://youtu.be/xlHcNtp8g28"
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "may-2026",
+    title: "Building Humane AI Agents without the Pandering Bits",
+    date: "Thursday, May 21, 2026",
+    time: "6 PM ET",
+    speaker: "Jim Benson",
+    speakerLinkedin: "https://www.linkedin.com/in/jimbenson/",
+    description: "Join us for a practical and refreshingly honest session led by Jim Benson (Public Speaker, Consultant, Shingo Research Award Winning Author) where we'll explore how to build AI agents that are human-centered without turning them into yes-machines. Even though this specific demo will continue with Claude, the lessons on how to create agents that support real work, stay grounded in context, and offer constructive pushback are helpful with any model. This session is a great fit for anyone who wants AI that elevates your work to the next level. Expect practical examples and a few jokes at AI's expense.",
+    topics: [
+      "Prompt practices that set agents up for better behavior",
+      "How to design AI agents without them being overly agreeable",
+      "Ways to build more humane workflows that respect context, judgment, and nuance",
+      "Recommendations on how to audit and improve agent responses"
     ]
   }
 ];
