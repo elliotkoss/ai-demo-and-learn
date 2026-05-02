@@ -6,7 +6,7 @@ export const SITE = {
   githubRepo: "https://github.com/elliotkoss/ai-demo-and-learn",
   linkedinUrl: "https://www.linkedin.com/company/ai-demo-learn",
   meeting: {
-    when: "Last Thursday of the month @ 6 PM ET",
+    when: "3rd Thursday of the month @ 7 PM ET",
     where: "Zoom"
   },
   consultingEmail: "elliot@teqcrew.com",
