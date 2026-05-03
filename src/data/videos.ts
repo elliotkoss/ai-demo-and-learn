@@ -13,6 +13,17 @@ export type Video = {
 
 export const videos: Video[] = [
   {
+    id: "apr-2026-mastering-claude",
+    title: "Mastering Claude: From Basics to Advanced Workflows",
+    youtubeUrl: "https://youtu.be/xlHcNtp8g28",
+    eventId: "apr-2026",
+    date: "April 16, 2026",
+    description: "Get a comprehensive tour of the entire Claude ecosystem with Dr. Robert Voss. This session takes you step-by-step through Claude, Claude Code, and Claude Cowork, with hands-on demonstrations and practical workflows. Covers both free and paid versions, so you can follow along regardless of where you are in your Claude journey.",
+    speaker: "Dr. Robert Voss",
+    speakerLinkedin: "https://www.linkedin.com/in/ai-robvoss",
+    tags: ["demo", "claude", "workshop"]
+  },
+  {
     id: "mar-2026-openclaw",
     title: "Setup OpenClaw on a Cloud Server",
     youtubeUrl: "https://youtu.be/CVlIcodlV7I",
