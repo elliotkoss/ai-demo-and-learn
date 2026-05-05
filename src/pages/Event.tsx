@@ -17,7 +17,7 @@ type EventData = {
   id: string;
   title: string;
   date: string;
-  time: string;
+  time?: string;
   speaker: string;
   speakerLinkedin?: string;
   description: string;
@@ -80,7 +80,6 @@ const pastEvents: EventData[] = [
     id: "apr-2026",
     title: "Mastering Claude: From Basics to Advanced Workflows",
     date: "Thursday, April 16, 2026",
-    time: "7 PM ET",
     speaker: "Dr. Robert Voss",
     speakerLinkedin: "https://www.linkedin.com/in/ai-robvoss",
     description: "Join us for a comprehensive overview into the entire Claude ecosystem with Dr. Robert Voss. Whether you're just getting started or looking to unlock advanced capabilities, this session takes you step-by-step through Claude, Claude Code, and Claude Cowork, with hands-on demonstrations, practical workflows, and bonus content you won't want to miss. You are not required to have a paid Claude account. We will discuss the capabilities of free and paid versions of Claude.",
@@ -100,7 +99,6 @@ const upcomingEvents: EventData[] = [
     id: "may-2026",
     title: "Building Humane AI Agents without the Pandering Bits",
     date: "Thursday, May 21, 2026",
-    time: "6 PM ET",
     speaker: "Jim Benson",
     speakerLinkedin: "https://www.linkedin.com/in/jimbenson/",
     description: "Join us for a practical and refreshingly honest session led by Jim Benson (Public Speaker, Consultant, Shingo Research Award Winning Author) where we'll explore how to build AI agents that are human-centered without turning them into yes-machines. Even though this specific demo will continue with Claude, the lessons on how to create agents that support real work, stay grounded in context, and offer constructive pushback are helpful with any model. This session is a great fit for anyone who wants AI that elevates your work to the next level. Expect practical examples and a few jokes at AI's expense.",
@@ -165,7 +163,7 @@ const Event = () => {
                         idx === 0 ? 'text-foreground/90' : 'text-muted-foreground'
                       }`}>
                         <Clock className="h-4 w-4" />
-                        <span>{event.time}</span>
+                        <span>{event.time ?? SITE.defaultEventTime}</span>
                       </div>
                     </div>
 
@@ -283,7 +281,7 @@ const Event = () => {
                         </div>
                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
                           <Clock className="h-4 w-4" />
-                          <span>{event.time}</span>
+                          <span>{event.time ?? SITE.defaultEventTime}</span>
                         </div>
                       </div>
 

@@ -9,6 +9,7 @@ export const SITE = {
     when: "3rd Thursday of the month @ 7 PM ET",
     where: "Zoom"
   },
+  defaultEventTime: "7 PM ET",
   consultingEmail: "elliot@teqcrew.com",
   contactName: "Elliot"
 } as const;
