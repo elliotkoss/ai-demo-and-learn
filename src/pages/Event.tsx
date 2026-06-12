@@ -116,13 +116,12 @@ const upcomingEvents: EventData[] = [
     date: "Thursday, June 18, 2026",
     speaker: "Zach Nelson",
     speakerLinkedin: "https://www.linkedin.com/in/zacharynelson/",
-    description: "Join Zach Nelson, VP of Operations & IT Solutions at Nebraska Children and Families Foundation, for a practical look at what separates AI projects that deliver from the ones that quietly fail. Drawing from Snowflake Summit 2026, Zach walks through the governance frameworks, data catalogs, and semantic layers that make AI auditable, trustworthy, and actually useful, then shows a live Intelligent Inbox Management demo where an AI assistant monitors multiple inboxes, classifies and prioritizes messages, and defends against credential-theft and prompt injection attacks. We will leave room for Q&A.",
+    description: "Join Zach Nelson, VP of Operations & IT Solutions at Nebraska Children and Families Foundation, for a practical look at what separates AI projects that deliver from the ones that quietly fail.\n\nDrawing from Snowflake Summit 2026, Zach brings his extensive experience from years of leading IT programs to walk attendees through universal principles that can help anyone develop successful AI use cases. If you've ever rebuilt a dashboard because nobody trusted the AI output, this is for you. He'll also demo an Intelligent Inbox Management assistant that can immediately save hours at work without requiring a pilot program, big budget, or executive sign-off. We'll have open Q&A for attendees to deep dive on the topics and what's realistic for your current setup.",
     topics: [
-      "The governance frameworks, data catalogs, and semantic layers that make AI auditable and trustworthy",
-      "Lessons from Snowflake Summit 2026 on the infrastructure behind reliable AI",
-      "A live Intelligent Inbox Management demo: classifying and prioritizing messages across multiple inboxes",
-      "How to protect AI assistants against credential-theft and prompt injection attacks",
-      "Open Q&A on the demo, the infrastructure, and what's realistic for your current setup"
+      "Practical takeaways from the Snowflake Summit 2026",
+      "Governance frameworks, data catalogs, and semantic layers that make AI auditable and trustworthy",
+      "How to setup an AI assistant to manage multiple email accounts",
+      "How to protect against credential-theft and prompt injection attacks"
     ]
   }
 ];
@@ -214,10 +213,12 @@ const Event = () => {
                         <span className="text-sm">Zoom (link via signup or Discord community)</span>
                       </div>
 
-                      <p className="text-muted-foreground mb-4">
-                        {event.description}
-                      </p>
-                      
+                      {event.description.split('\n\n').map((paragraph, pIdx) => (
+                        <p key={pIdx} className="text-muted-foreground mb-4">
+                          {paragraph}
+                        </p>
+                      ))}
+
                       {event.topics[0] !== "Details coming soon" && (
                         <div className="mb-6">
                           <h4 className="font-semibold text-foreground text-sm mb-2">What You'll Learn:</h4>
@@ -327,9 +328,11 @@ const Event = () => {
                           </span>
                         </div>
 
-                        <p className="text-muted-foreground mb-4">
-                          {event.description}
-                        </p>
+                        {event.description.split('\n\n').map((paragraph, pIdx) => (
+                          <p key={pIdx} className="text-muted-foreground mb-4">
+                            {paragraph}
+                          </p>
+                        ))}
 
                         {event.topics[0] !== "Details coming soon" && (
                           <div className="mb-6">
