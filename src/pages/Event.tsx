@@ -90,11 +90,7 @@ const pastEvents: EventData[] = [
       "Advanced techniques: chaining workflows, system prompts, and agentic tasks"
     ],
     videoUrl: "https://youtu.be/xlHcNtp8g28"
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "may-2026",
     title: "Building Humane AI Agents without the Pandering Bits",
@@ -107,6 +103,26 @@ const upcomingEvents: EventData[] = [
       "How to design AI agents without them being overly agreeable",
       "Ways to build more humane workflows that respect context, judgment, and nuance",
       "Recommendations on how to audit and improve agent responses"
+    ],
+    videoUrl: "https://youtu.be/BU_qrBJU54s"
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "jun-2026",
+    title: "How AI Actually Succeeds (And Why Most Projects Don't)",
+    date: "Thursday, June 18, 2026",
+    speaker: "Zach Nelson",
+    speakerLinkedin: "https://www.linkedin.com/in/zacharynelson/",
+    description: "Join Zach Nelson, VP of Operations & IT Solutions at Nebraska Children and Families Foundation, for a practical look at what separates AI projects that deliver from the ones that quietly fail. Drawing from Snowflake Summit 2026, Zach walks through the governance frameworks, data catalogs, and semantic layers that make AI auditable, trustworthy, and actually useful, then shows a live Intelligent Inbox Management demo where an AI assistant monitors multiple inboxes, classifies and prioritizes messages, and defends against credential-theft and prompt injection attacks. We will leave room for Q&A.",
+    topics: [
+      "The governance frameworks, data catalogs, and semantic layers that make AI auditable and trustworthy",
+      "Lessons from Snowflake Summit 2026 on the infrastructure behind reliable AI",
+      "A live Intelligent Inbox Management demo: classifying and prioritizing messages across multiple inboxes",
+      "How to protect AI assistants against credential-theft and prompt injection attacks",
+      "Open Q&A on the demo, the infrastructure, and what's realistic for your current setup"
     ]
   }
 ];

@@ -13,6 +13,17 @@ export type Video = {
 
 export const videos: Video[] = [
   {
+    id: "may-2026-humane-ai-agents",
+    title: "Building Humane AI Agents without the Pandering Bits",
+    youtubeUrl: "https://youtu.be/BU_qrBJU54s",
+    eventId: "may-2026",
+    date: "May 21, 2026",
+    description: "Jim Benson (Public Speaker, Consultant, Shingo Research Award Winning Author) explores how to build AI agents that are human-centered without turning them into yes-machines. The demo runs on Claude, but the lessons on creating agents that support real work, stay grounded in context, and offer constructive pushback apply to any model. Expect practical examples and a few jokes at AI's expense.",
+    speaker: "Jim Benson",
+    speakerLinkedin: "https://www.linkedin.com/in/jimbenson/",
+    tags: ["demo", "agents", "claude"]
+  },
+  {
     id: "apr-2026-mastering-claude",
     title: "Mastering Claude: From Basics to Advanced Workflows",
     youtubeUrl: "https://youtu.be/xlHcNtp8g28",
