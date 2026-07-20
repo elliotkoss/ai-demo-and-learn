@@ -105,11 +105,7 @@ const pastEvents: EventData[] = [
       "Recommendations on how to audit and improve agent responses"
     ],
     videoUrl: "https://youtu.be/BU_qrBJU54s"
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "jun-2026",
     title: "How AI Actually Succeeds (And Why Most Projects Don't)",
@@ -122,6 +118,25 @@ const upcomingEvents: EventData[] = [
       "Governance frameworks, data catalogs, and semantic layers that make AI auditable and trustworthy",
       "How to setup an AI assistant to manage multiple email accounts",
       "How to protect against credential-theft and prompt injection attacks"
+    ]
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "jul-2026",
+    title: "Claude for Teachers",
+    date: "Thursday, July 23, 2026",
+    speaker: "Dr. Robert Voss",
+    speakerLinkedin: "https://www.linkedin.com/in/ai-robvoss",
+    description: "Join us for a timely look at Claude for Teachers with Dr. Robert Voss, back for another session with AI Demo & Learn. Anthropic just announced free premium Claude access for all verified U.S. K-12 teachers for a full year at no cost or strings attached. This session breaks down what practical application actually means for your classroom and why it's worth your time even if you've never touched an AI tool before.\n\nYou don't have to be a teacher to benefit. This is really a hands-on look at Claude's agentic tools, knowledge-grounded content generation, and automated workflows (features that translate well beyond education). Consultants, trainers, project managers, and nonprofit staff will all find something to apply directly to their own work. You are not required to have any technical background or prior AI experience.",
+    topics: [
+      "Getting verified and signed up for Claude for Teachers",
+      "What this tool does for real teachers from the point of view of someone who has been in the classroom for over 25 years",
+      "How Claude's public restrictions on kids using AI differs from Google's practices",
+      "Using Claude Code and Cowork to automate routine tasks like recurring reviews and status synthesis, without re-prompting",
+      "Q&A from with Attendees"
     ]
   }
 ];
