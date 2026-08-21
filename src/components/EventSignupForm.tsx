@@ -61,7 +61,7 @@ const EventSignupForm = () => {
           You're Registered! 🎉
         </h3>
         <p className="text-muted-foreground mb-2">
-          We've received your registration! We'll add you to the event invite shortly and you'll receive a calendar invite with the Zoom link via email.
+          We've received your registration! We'll add you to the event invite shortly and you'll receive a calendar invite with the meeting link via email.
         </p>
         <p className="text-sm text-muted-foreground">
           Join our Discord for updates and to chat with other attendees!

@@ -11,5 +11,7 @@ export const SITE = {
   },
   defaultEventTime: "7 PM ET",
   consultingEmail: "elliot@teqcrew.com",
+  // Contact shown on the Privacy Policy page. Swap for a dedicated AIDL inbox when one exists.
+  privacyEmail: "elliot@aidemolearn.com",
   contactName: "Elliot"
 } as const;

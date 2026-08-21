@@ -57,6 +57,13 @@ const Footer = () => {
             </Button>
           </div>
 
+          {/* Legal */}
+          <div className="text-sm text-muted-foreground">
+            <Link to="/privacy" className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
+
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
             © 2025–{new Date().getFullYear()} {SITE.title}. Open source and community driven.

@@ -1,4 +1,5 @@
 import { Calendar, Clock, MapPin, Users, ArrowDown, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MainLayout from "@/components/MainLayout";
@@ -22,8 +23,11 @@ type EventData = {
   speakerLinkedin?: string;
   description: string;
   topics: string[];
+  location?: string;
   videoUrl?: string;
 };
+
+const DEFAULT_LOCATION = "Zoom (link via signup or Discord community)";
 
 // Past events data
 const pastEvents: EventData[] = [
@@ -119,11 +123,7 @@ const pastEvents: EventData[] = [
       "How to setup an AI assistant to manage multiple email accounts",
       "How to protect against credential-theft and prompt injection attacks"
     ]
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "jul-2026",
     title: "Claude for Teachers",
@@ -137,6 +137,25 @@ const upcomingEvents: EventData[] = [
       "How Claude's public restrictions on kids using AI differs from Google's practices",
       "Using Claude Code and Cowork to automate routine tasks like recurring reviews and status synthesis, without re-prompting",
       "Q&A from with Attendees"
+    ]
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "aug-2026",
+    title: "You Already Have Copilot. Now What?",
+    date: "Thursday, August 27, 2026",
+    speaker: "Jenna Adams-Valadez",
+    speakerLinkedin: "https://www.linkedin.com/in/jenna-adams-valadez/",
+    location: "Microsoft Teams (link via signup or Discord community)",
+    description: "Many organizations have Microsoft 365 AI tools but aren't sure where to begin. In this beginner-friendly session, Jenna will use her experience as a Lean Six Sigma consultant to help attendees identify repetitive administrative work, process waste, and low- to zero-budget opportunities where Copilot can demonstrate immediate value.\n\nWe'll explore practical capabilities in Microsoft 365 Copilot, Teams, and Copilot Studio, from using existing features and templates to creating an agent for a repeatable process. No coding or prior AI experience is required.\n\nYou'll leave with practical ideas and a straightforward framework for reducing administrative work and demonstrating measurable value in almost any role.",
+    topics: [
+      "Brief look at how Lean Six Sigma thinking can uncover administrative waste",
+      "How to identify low-risk, low-cost AI pilot opportunities",
+      "Time-saving Copilot and Teams capabilities you may already have",
+      "How to begin building and testing a simple agent"
     ]
   }
 ];
@@ -225,7 +244,7 @@ const Event = () => {
 
                       <div className="flex items-center gap-2 text-muted-foreground mb-4">
                         <MapPin className="h-4 w-4" />
-                        <span className="text-sm">Zoom (link via signup or Discord community)</span>
+                        <span className="text-sm">{event.location ?? DEFAULT_LOCATION}</span>
                       </div>
 
                       {event.description.split('\n\n').map((paragraph, pIdx) => (
@@ -271,7 +290,7 @@ const Event = () => {
                 Register for Events
               </h2>
               <p className="text-muted-foreground">
-                Sign up to receive Zoom links and calendar invites for our upcoming events
+                Sign up to receive meeting links and calendar invites for our upcoming events
               </p>
             </div>
             
@@ -282,7 +301,13 @@ const Event = () => {
             </Card>
 
             <p className="text-center text-sm text-muted-foreground mt-4">
-              By registering, you'll receive email invitations with Zoom links for all upcoming events
+              By registering, you'll receive email invitations with meeting links for all upcoming
+              events. We use your information only to run these events, and we never sell or share
+              it. See our{" "}
+              <Link to="/privacy" className="underline hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+              .
             </p>
           </div>
         </div>

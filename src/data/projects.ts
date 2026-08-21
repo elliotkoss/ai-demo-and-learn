@@ -72,7 +72,7 @@ export const projects: Project[] = [
   {
     title: "KittyLog",
     creator: "cell",
-    description: "AI-powered changelog generator for GitHub. Push a release and get polished notes — tailored for developers or end-users, hosted on your domain.",
+    description: "AI-powered changelog generator for GitHub. Push a release and get polished notes, tailored for developers or end-users, hosted on your domain.",
     imageUrl: "/images/kittylog.png",
     links: [
       { href: "https://kittylog.app/", label: "Website" }
