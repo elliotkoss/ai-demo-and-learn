@@ -13,6 +13,19 @@ const LinkedInLogo = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Render [label](url) in descriptions as external links
+const renderWithLinks = (text: string) =>
+  text.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    return match ? (
+      <a key={i} href={match[2]} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+        {match[1]}
+      </a>
+    ) : (
+      part
+    );
+  });
+
 // Event type
 type EventData = {
   id: string;
@@ -138,11 +151,7 @@ const pastEvents: EventData[] = [
       "Using Claude Code and Cowork to automate routine tasks like recurring reviews and status synthesis, without re-prompting",
       "Q&A from with Attendees"
     ]
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "aug-2026",
     title: "You Already Have Copilot. Now What?",
@@ -156,6 +165,26 @@ const upcomingEvents: EventData[] = [
       "How to identify low-risk, low-cost AI pilot opportunities",
       "Time-saving Copilot and Teams capabilities you may already have",
       "How to begin building and testing a simple agent"
+    ]
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "oct-2026",
+    title: "Create Your First AI-Built App with Claude Design, Claude Code, GitHub & Docker",
+    date: "Thursday, October 29, 2026",
+    speaker: "Elliot Koss",
+    speakerLinkedin: "https://www.linkedin.com/in/elliotkoss",
+    description: "Join Elliot Koss, a Principal Product Manager at a startup and founder of [Career Amplifier](https://careeramplifier.com), for a beginner-friendly tour of the toolkit behind building software with AI. Rather than covering each tool on its own, we'll build one small project live, a simple task manager website, and follow it from first sketch to a running app.\n\nWe'll start by designing the screens in Claude Design, then hand that design to Claude Code to build it. Along the way you'll see why GitHub matters (saving every version of your work and sharing it with others) and what Docker does (running the app the same way on any computer). By the end, you'll understand how the four tools fit together and where each one saves you time.\n\nThis session is made for people who have never used any of these tools. No coding background or prior AI experience is required. We'll make the code public at the end, so you can pick up right where we left off. To follow along on your own computer, you'll need a Claude Pro subscription ($20/month), which includes Claude Design and Claude Code, plus a free GitHub account and Docker Desktop (also free).",
+    topics: [
+      "What Claude Design, Claude Code, GitHub and Docker each do, in plain language",
+      "Designing a task manager website in Claude Design",
+      "Turning that design into a working app with Claude Code",
+      "Saving and sharing your work with GitHub: repos, commits and pull requests, explained simply",
+      "Running the app on any computer with Docker",
+      "What to set up to try this yourself, plus live Q&A"
     ]
   }
 ];
@@ -249,7 +278,7 @@ const Event = () => {
 
                       {event.description.split('\n\n').map((paragraph, pIdx) => (
                         <p key={pIdx} className="text-muted-foreground mb-4">
-                          {paragraph}
+                          {renderWithLinks(paragraph)}
                         </p>
                       ))}
 
@@ -370,7 +399,7 @@ const Event = () => {
 
                         {event.description.split('\n\n').map((paragraph, pIdx) => (
                           <p key={pIdx} className="text-muted-foreground mb-4">
-                            {paragraph}
+                            {renderWithLinks(paragraph)}
                           </p>
                         ))}
 

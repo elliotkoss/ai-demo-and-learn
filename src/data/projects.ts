@@ -27,7 +27,7 @@ export const projects: Project[] = [
     links: [
       { href: "https://careeramplifier.com", label: "Website" }
     ],
-    tags: ["cursor", "openai", "react", "node", "python"]
+    tags: ["claude-code", "openai", "react", "node", "python"]
   },
   {
     title: "Pebble Words",
