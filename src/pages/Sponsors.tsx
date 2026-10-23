@@ -147,7 +147,7 @@ const Sponsors = () => {
               <div className="flex items-start space-x-3">
                 <CheckCircle className="h-5 w-5 text-success shrink-0 mt-1" />
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Provide some tangible benefit to our live public demo audience—whether that's
+                  Provide some tangible benefit to our live public demo audience, whether that's
                   product access, usage credits, or other perks that help people learn hands-on.
                 </p>
               </div>

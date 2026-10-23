@@ -13,6 +13,7 @@ import Event from "./pages/Event";
 import Videos from "./pages/Videos";
 import Contribute from "./pages/Contribute";
 import Sponsors from "./pages/Sponsors";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/videos" element={<Videos />} />
           <Route path="/contribute" element={<Contribute />} />
           <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/contributing" element={<Navigate to="/contribute" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

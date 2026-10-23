@@ -11,7 +11,7 @@ export const resources: Resource[] = [
   {
     name: "Synthetic",
     url: "https://synthetic.new",
-    description: "Managed platform for running open-source language models in secure US and EU datacenters. Privacy-first infrastructure that never trains on your data—just paste a Hugging Face link and deploy any supported LLM.",
+    description: "Managed platform for running open-source language models in secure US and EU datacenters. Privacy-first infrastructure that never trains on your data. Just paste a Hugging Face link and deploy any supported LLM.",
     tags: ["api", "models", "open-source", "infrastructure"],
     isSponsor: true
   },
@@ -78,7 +78,7 @@ export const resources: Resource[] = [
   {
     name: "HeyGen",
     url: "https://app.heygen.com/",
-    description: "Generative video platform for realistic avatars, lip‑sync, and multilingual video creation—great for demos, training, and marketing content.",
+    description: "Generative video platform for realistic avatars, lip‑sync, and multilingual video creation, great for demos, training, and marketing content.",
     tags: ["video", "avatars", "multilingual"]
   },
   {
