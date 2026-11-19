@@ -166,11 +166,7 @@ const pastEvents: EventData[] = [
       "Time-saving Copilot and Teams capabilities you may already have",
       "How to begin building and testing a simple agent"
     ]
-  }
-];
-
-// Upcoming events data
-const upcomingEvents: EventData[] = [
+  },
   {
     id: "oct-2026",
     title: "Create Your First AI-Built App with Claude Design, Claude Code, GitHub & Docker",
@@ -185,6 +181,28 @@ const upcomingEvents: EventData[] = [
       "Saving and sharing your work with GitHub: repos, commits and pull requests, explained simply",
       "Running the app on any computer with Docker",
       "What to set up to try this yourself, plus live Q&A"
+    ],
+    videoUrl: "https://youtu.be/QU7-xdT1ncs"
+  }
+];
+
+// Upcoming events data
+const upcomingEvents: EventData[] = [
+  {
+    id: "nov-2026",
+    title: "Back to Our Roots: Community AI Show & Tell",
+    date: "Thursday, November 19, 2026",
+    speaker: "Jenna Adams-Valadez",
+    speakerLinkedin: "https://www.linkedin.com/in/jenna-adams-valadez/",
+    description: "This month, AI Demo & Learn is getting back to its roots. What started as a casual gathering for AI enthusiasts, builders, and curious professionals is opening the forum up for individuals to demonstrate what they've been working on, collaborate, and talk about current events in AI.\n\nFresh off the speaking circuit over the past few months, Jenna Adams-Valadez, Owner of The Lean Eye, LLC, will facilitate this free virtual event. She will share some of her own projects, challenges and lessons learned after talking to hundreds of individuals who have been trying to incorporate practical AI utilization in their daily management systems.\n\nWhether you're actively building solutions, just starting your AI journey, or simply trying to make sense of a rapidly changing landscape, you'll find a welcoming community ready to learn together. This is an intentionally casual, unrecorded session. Feel free to join for the full hour or drop in when your schedule allows. No recordings. No pressure. No sales pitch. Just real people sharing real experiences, asking honest questions, and helping each other make sense of AI.",
+    topics: [
+      "Share what you've been building with AI tools",
+      "Work through real challenges and get feedback, ideas, and practical suggestions from fellow attendees",
+      "Learn from live examples and demonstrations contributed by participants",
+      "Explore practical ways AI is improving productivity, processes, and everyday work",
+      "Discuss current AI news, emerging trends, and what they may mean for individuals and organizations",
+      "Have open conversations about ethical concerns, risks, governance, and responsible AI adoption",
+      "Connect with other professionals navigating the same opportunities, uncertainties, and questions in a judgment-free space"
     ]
   }
 ];

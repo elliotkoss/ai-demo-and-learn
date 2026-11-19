@@ -13,6 +13,17 @@ export type Video = {
 
 export const videos: Video[] = [
   {
+    id: "oct-2026-first-ai-built-app",
+    title: "Create Your First AI-Built App with Claude Design, Claude Code, GitHub & Docker",
+    youtubeUrl: "https://youtu.be/QU7-xdT1ncs",
+    eventId: "oct-2026",
+    date: "October 29, 2026",
+    description: "Elliot Koss, a Principal Product Manager and founder of Career Amplifier, builds a simple task manager website live, taking it from first sketch to a running app. See how Claude Design, Claude Code, GitHub and Docker fit together and where each one saves you time. Beginner-friendly, with no coding background or prior AI experience required.",
+    speaker: "Elliot Koss",
+    speakerLinkedin: "https://www.linkedin.com/in/elliotkoss",
+    tags: ["demo", "claude", "beginner"]
+  },
+  {
     id: "may-2026-humane-ai-agents",
     title: "Building Humane AI Agents without the Pandering Bits",
     youtubeUrl: "https://youtu.be/BU_qrBJU54s",
